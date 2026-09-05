@@ -1,0 +1,127 @@
+:root {
+    /* Colors */
+    --background-color: #FFFFFF;
+    --accent-color: #EBA51B;
+    --header-background: #002E5D;
+    --secondary-color: #CDCDCD;
+    --hover-color: #F95738;
+
+    /* Fonts */
+    --header-font: "Fira Sans", sans-serif;
+    --body-font: "Playfair Display", serif;
+    --heading-font: "Sue Ellen Francisco", cursive;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ===== HEADER ===== */
+
+header {
+    background-color: var(--header-background);
+    font-family: var(--header-font);
+
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.logo {
+    width: 80px;
+    margin: 20px;
+}
+
+header span {
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    position: relative;
+    width: 50%;
+}
+
+.header-nav {
+    position: absolute;
+    top: 100%;
+    right:0;
+    width: 180px;
+    background-color: var(--header-background);
+    z-index: 1000;
+    border-top: 1px solid var(--secondary-color);
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease,
+        visibility 0.3s ease;
+}
+
+.header-nav.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.header-nav li {
+    display: block;
+}
+
+.navigation {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.header-nav.show li {
+    display: block;
+}
+
+.header-nav a {
+    display: block;
+    text-align: center;
+    padding: 0.8rem;
+    text-decoration: none;
+    font-size: 1.5rem;
+    transition: background-color 0.3s ease;
+    color: white;
+}
+
+.header-nav a:hover {
+    background-color: var(--accent-color);
+    color: var(--header-background);
+}
+
+/* ===== HAMBURGER MENU ====== */
+#menu {
+    display: block;
+    margin-left: auto;
+    margin-right: 1rem;
+    font-size: 2rem;
+    font-weight:700;
+    text-decoration: none;
+    padding: 0.5rem 0.75rem;
+    color: var(--background-color);
+}
+
+#menu:before {
+    content: "≡";
+    font-size: 2.8rem;
+    font-weight: lighter;
+    color: var(--background-color);
+}
+
+#menu.show::before {
+    content: "✕";
+    font-size: 2rem;
+    font-weight: bold;
+}
