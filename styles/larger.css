@@ -1,18 +1,19 @@
-:root {
-    /* Colors */
-    --background-color: #FFFFFF;
-    --accent-color: #EBA51B;
-    --header-background: #002E5D;
-    --secondary-color: #CDCDCD;
-    --hover-color: #F95738;
-
-    /* Fonts */
-    --header-font: "Fira Sans", sans-serif;
-    --body-font: "Playfair Display", serif;
-    --heading-font: "Sue Ellen Francisco", cursive;
-}
 
 @media only screen and (min-width: 1025px) {
+    :root {
+        /* Colors */
+        --background-color: #FFFFFF;
+        --accent-color: #EBA51B;
+        --header-background: #002E5D;
+        --secondary-color: #CDCDCD;
+        --hover-color: #F95738;
+
+        /* Fonts */
+        --header-font: "Fira Sans", sans-serif;
+        --body-font: "Playfair Display", serif;
+        --heading-font: "Sue Ellen Francisco", cursive;
+    }
+
     main {
         max-width: 1200px;
         margin: 0 auto;
