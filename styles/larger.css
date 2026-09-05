@@ -1,6 +1,54 @@
-@media (min-width: 1025px) {
+:root {
+    /* Colors */
+    --background-color: #FFFFFF;
+    --accent-color: #EBA51B;
+    --header-background: #002E5D;
+    --secondary-color: #CDCDCD;
+    --hover-color: #F95738;
+
+    /* Fonts */
+    --header-font: "Fira Sans", sans-serif;
+    --body-font: "Playfair Display", serif;
+    --heading-font: "Sue Ellen Francisco", cursive;
+}
+
+@media only screen and (min-width: 1025px) {
+    header {
+        grid-template-columns: 50px auto;
+    }
 
     header span {
         font-size: 3rem;
     }
+
+    .hamburger {
+        display: none;
+    }
+
+    .nav-menu {
+        display: block;
+    }
+
+    .navigation {
+        display: flex;
+        align-items: center;
+    }
+
+    .navigation li a {
+        padding: 10px;
+        transition: background-color 0.3s ease;
+
+    }
+
+    .navigation li a:hover {
+        background-color: var(--hover-color);
+        color: var(--header-background);
+    }
+
+    .navigation .active {
+        color: var(--header-background);
+        background-color: var(--accent-color);
+    }
+
+
 }

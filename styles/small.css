@@ -14,114 +14,70 @@
 
 * {
     margin: 0;
-    padding: 0;
     box-sizing: border-box;
-}
-
-main {
-    max-width: 1200px;
-    margin: 0 auto;
 }
 
 /* ===== HEADER ===== */
 
 header {
+    display: grid;
+    grid-template-columns: 50px auto 60px;
+    padding: 5px 0 5px 10px;
     background-color: var(--header-background);
-    font-family: var(--header-font);
-
-    display: flex;
     align-items: center;
-    position: relative;
+    column-gap: 10px;
+    width: 100%;
+    height: 80px;
 }
 
-.logo {
-    width: 80px;
-    margin: 20px;
+header img {
+    display: block;
+    width: 100%;
+    height: auto;
 }
 
 header span {
+    font-family: var(--header-font);
     color: white;
-    font-size: 2rem;
     font-weight: bold;
-    position: relative;
-    width: 50%;
+    font-size: 1.2rem;
+    justify-content: start;
 }
 
-.header-nav {
-    position: absolute;
-    top: 100%;
-    right:0;
-    width: 180px;
-    background-color: var(--header-background);
-    z-index: 1000;
-    border-top: 1px solid var(--secondary-color);
 
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(-10px);
-
-    transition:
-        opacity 0.3s ease,
-        transform 0.3s ease,
-        visibility 0.3s ease;
-}
-
-.header-nav.show {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-}
-
-.header-nav li {
-    display: block;
-}
-
-.navigation {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.header-nav.show li {
-    display: block;
-}
-
-.header-nav a {
-    display: block;
-    text-align: center;
-    padding: 0.8rem;
-    text-decoration: none;
-    font-size: 1.5rem;
-    transition: background-color 0.3s ease;
-    color: white;
-}
-
-.header-nav a:hover {
-    background-color: var(--accent-color);
-    color: var(--header-background);
-}
-
-/* ===== HAMBURGER MENU ====== */
-#menu {
-    display: block;
-    margin-left: auto;
-    margin-right: 1rem;
+/* ===== HAMBURGER MENU ===== */
+.hamburger {
+    background: none;
+    border: none;
     font-size: 2rem;
-    font-weight:700;
-    text-decoration: none;
-    padding: 0.5rem 0.75rem;
-    color: var(--background-color);
+    color: white;
+    cursor: pointer;
+    right: 0px;
 }
 
-#menu:before {
-    content: "≡";
-    font-size: 2.8rem;
+.hamburger::after {
+    content: "\2630";
+}
+
+.hamburger.show::after {
+    content: "\00D7";
+    font-size: 3rem;
     font-weight: lighter;
-    color: var(--background-color);
 }
 
-#menu.show::before {
-    content: "✕";
-    font-size: 2rem;
-    font-weight: bold;
+/* ===== NAVIGATION MENU ===== */
+
+.nav-menu {
+    display: none;
+    font-family: var(--header-font);
+    font-size: 1.2rem;
+}
+
+.nav-menu ul li {
+    list-style: none;
+}
+
+.nav-menu ul li a {
+    text-decoration: none;
+    color: white;
 }
