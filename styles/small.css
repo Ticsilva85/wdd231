@@ -14,8 +14,12 @@
 * {
     margin: 0;
     box-sizing: border-box;
+}
+
+body {
     font-family: var(--body-font);
 }
+
 
 /* ===== HEADER ===== */
 
@@ -115,4 +119,14 @@ h1 {
     text-align: justify;
     font-family: var(--body-font);
     font-size: 1rem;
+}
+
+.student-photo img {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.certificates {
+    border-radius: 10px;
 }
