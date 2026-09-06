@@ -199,5 +199,5 @@ footer ul li a img {
     text-align: center;
     color: white;
     font-family:var(--header-font);
-    padding: 20px;
+    padding-bottom: 10px;
 }
