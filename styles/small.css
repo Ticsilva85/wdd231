@@ -24,6 +24,7 @@ body {
 /* ===== HEADER ===== */
 
 header {
+    position: relative;
     display: grid;
     grid-template-columns: 50px auto 60px;
     padding: 5px 0 5px 10px;
@@ -77,11 +78,30 @@ header span {
     font-size: 1.2rem;
 }
 
+.nav-menu.show {
+    font-weight: bold;
+    display: block;
+    position: absolute;
+    top: 80px;
+    right: 0;
+    width: 50%;
+    background-color: var(--header-background);
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.nav-menu ul {
+    padding: 0;
+}
+
 .nav-menu ul li {
     list-style: none;
 }
 
 .nav-menu ul li a {
+    display: block;
+    padding: 15px;
+    text-align: center;
     text-decoration: none;
     color: white;
 }
