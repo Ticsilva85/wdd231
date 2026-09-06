@@ -128,5 +128,54 @@ h1 {
 }
 
 .certificates {
+    border: solid 1px rgba(0, 0, 0, 0.5);
     border-radius: 10px;
+    overflow: hidden;
+}
+
+.certificates h2 {
+    background-color: var(--header-background);
+    color: white;
+    padding: 10px;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background-color: var(--header-background);
+    margin-top: 20px;
+}
+
+footer ul {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+footer ul li {
+    list-style: none;
+}
+
+footer ul li a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+    font-family: var(--header-font);
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
+}
+
+footer ul li a:hover {
+    background-color: var(--hover-color);
+    color: var(--header-background);
+    width: 100%;
+
+}
+
+.footer-note {
+    text-align: center;
+    color: white;
+    font-family:var(--header-font);
+    padding: 20px;
 }
