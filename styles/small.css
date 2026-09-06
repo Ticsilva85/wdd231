@@ -9,12 +9,12 @@
     /* Fonts */
     --header-font: "Fira Sans", sans-serif;
     --body-font: "Playfair Display", serif;
-    --heading-font: "Sue Ellen Francisco", cursive;
 }
 
 * {
     margin: 0;
     box-sizing: border-box;
+    font-family: var(--body-font);
 }
 
 /* ===== HEADER ===== */
@@ -80,4 +80,39 @@ header span {
 .nav-menu ul li a {
     text-decoration: none;
     color: white;
+}
+
+/* ===== MAIN ===== */
+.about-me-section {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 10px;
+}
+
+h1 {
+    padding: 20px;
+}
+
+.about-me, .student-photo {
+    border: solid 1px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.about-me h2, .student-photo h2 {
+    background-color: var(--header-background);
+    color: white;
+    font-family: var(--header-font);
+    padding: 10px;
+}
+
+.about-me p, .student-photo img {
+    padding: 20px;
+}
+
+.about-me p {
+    text-align: justify;
+    font-family: var(--body-font);
+    font-size: 1rem;
 }
