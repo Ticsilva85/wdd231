@@ -16,8 +16,10 @@
     box-sizing: border-box;
 }
 
-body {
+html, body {
     font-family: var(--body-font);
+    width:100%;
+    min-height: 100%;
 }
 
 /* ===== HEADER ===== */
@@ -171,7 +173,8 @@ h1 {
 
 .course-filters {
     display: flex;
-    flex-direction: center;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
     gap: 10px;
     padding: 10px;

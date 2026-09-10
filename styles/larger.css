@@ -90,7 +90,11 @@
         margin: 20px;
     }
 
+    .course-filters {
+        flex-direction: row;
+    }
 
-
-
+    .course-filters button {
+        width: 150px;
+    }
 }
