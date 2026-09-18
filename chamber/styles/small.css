@@ -18,6 +18,7 @@
 html {
     width: 100%;
     min-height: 100%;
+    color: var(--text-color);
 }
 
 /* ===== HEADER ===== */
@@ -114,4 +115,117 @@ header img {
     text-align: center;
     text-decoration: none;
     color: var(--color-background);
+}
+
+/* ===== MAIN ===== */
+
+h1 {
+    font-family: var(--heading-font);
+    padding: 20px;
+}
+
+/* ===== Directory Grid ===== */
+.directory-container.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* ===== Directory List ===== */
+
+.member-card {
+    padding: 20px;
+    border: 1px solid #ccc;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+.member-card img {
+    display: block;
+    width: 150px;
+    height: 100px;
+    object-fit: contain;
+    margin: 0 auto 15px;
+}
+
+.member-card h2 {
+    font-family: var(--body-font);
+    margin-bottom: 10px; 
+}
+
+.member-card p{
+    font-family: var(--body-font);
+    margin-bottom: 8px;
+}
+
+.member-card a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 15px;
+    background-color: var(--primary-color);
+    color: var(--color-background);
+    text-decoration: none;
+    font-family: var(--heading-font);
+    font-weight: bold;
+    border-radius: 4px;
+    transition: background-color ease 0.5s;
+}
+
+.member-card a:hover {
+    background-color: var(--accent-color-second);
+    color: var(--text-color);
+}
+
+/* ===== Directory Container List */
+.directory-container.list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    padding: 20px;
+}
+
+.directory-container.list .member-card {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 12px 5px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    border-radius: 0;
+    box-shadow: none;
+    text-align: left;
+}
+
+.directory-container.list .member-card img {
+    display: none;
+}
+
+.directory-container.list .member-card h2,
+.directory-container.list .member-card p,
+.directory-container.list .member-card a {
+    margin: 0;
+    padding: 5px;
+}
+
+.directory-container.list .member-card h2 {
+    font-size: 1.1rem;
+}
+
+.directory-container.list .member-card a {
+    display: inline-block;
+    width: fit-content;
+    margin-top: 5px;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: var(--primary-color);
+    align-items: center;
+    column-gap: 10px;
+    width: 100%;
+    height: 80px;
 }

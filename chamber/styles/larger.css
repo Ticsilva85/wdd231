@@ -11,12 +11,8 @@
     --body-font: "PT Serif", serif;
 }
 
-main {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
 header {
+    position: fixed;
     display: flex;
     align-items: center;
     gap: 20px;
@@ -35,6 +31,8 @@ img {
 .mobile-break {
     display: none;
 }
+
+/* ===== HAMBURGER MENU ===== */
 
 .hamburger {
     display: none;
@@ -65,7 +63,8 @@ img {
     font-weight: bold;
     width: 100%;
     padding: 10px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.5s ease;
+    
 }
 
 .navigation li a:hover {
@@ -73,4 +72,69 @@ img {
     color: var(--color-background);
 }
 
+/* ===== MAIN ===== */
+
+main {
+    max-width: 1200px;
+    margin: 0 auto 30px;
+    padding-top: 80px;
+}
+
+/* ===== Directory Container Grid ===== */
+
+.directory-container.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 280px);
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* ===== Directory Container List ===== */
+
+.directory-container.list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 0;
+    padding: 20px;
+}
+
+.directory-container.list .member-card {
+    display: grid;
+    grid-template-columns: 1.5fr 2fr 1.2fr 1.5fr 1fr;
+    align-items: center;
+    gap: 15px;
+    padding: 12px 10px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    border-radius: 0;
+    box-shadow: none;
+    text-align: left;
+}
+
+.directory-container.list .member-card img {
+    display: none;
+}
+
+.directory-container.list .member-card h2,
+.directory-container.list .member-card p,
+.directory-container.list .member-card a {
+    margin: 0;
+    padding: 0;
+}
+
+.directory-container.list .member-card h2 {
+    font-size: 1rem;
+}
+
+.directory-container.list .member-card p {
+    font-size: 0.9rem;
+}
+
+.directory-container.list .member-card a {
+    padding: 10px;
+    display: inline-block;
+    width: fit-content;
+}
 }

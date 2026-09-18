@@ -14,7 +14,6 @@
 
     <!-- JS -->
     <script src="./scripts/directory.js" defer></script>
-    <script src="./data/members.json"></script>
 
     <!-- META CONTENT -->
     <meta property="og:title" content="Recife Chamber of Commerce">
@@ -30,6 +29,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <header>
         <img src="images/commerce.svg" alt="Recife Chamber of Commerce icon">
@@ -55,20 +55,30 @@
             <button id="list">List</button>
         </div>
 
-        <div class="directory-container" id="directory"></div>
+        <div class="directory-container grid" id="directory"></div>
     </main>
 
     <footer>
             <div class="footer-header">
-
+                <img src="images/commerce.svg" alt="Recife Chamber of Commerce icon">
+                <span class="title">Recife <span class="mobile-break"><br></span><span class="chamber">Chamber of Commerce</span></span>
             </div>
 
             <div class="footer-nav">
-
+                <nav class="footer-menu" aria-label="Main Navigation">
+                    <ul class="footer-navigation">
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="directory.html" class="active">Directory</a></li>
+                        <li><a href="join.html">Join</a></li>
+                        <li><a href="discover.html">Discover</a></li>
+                    </ul>
+                </nav>
             </div>
 
             <div class="footer-notes">
+                <p>&copy; <span id="currentyear"></span> Tiago Cavalcante | Brazil</p>
 
+                <p id="lastModified"></p>
             </div>
     </footer>
     

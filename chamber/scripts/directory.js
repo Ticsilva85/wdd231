@@ -22,28 +22,29 @@ async function getMembers() {
     displayMembers(data);
 }
 
-// ===== DISPLAY MEMBERS ===== //
+// ===== Display Members ===== //
 function displayMembers(members) {
-    members.forEach(members => {
+
+    members.forEach(member => {
 
         const card = document.createElement('article');
 
-        card.classList.add('member.image');
+        card.classList.add('member-card');
 
         card.innerHTML = `
-            <img src="./images/${members.image}"
-                alt = "${members.name}"
+            <img src="./images/${member.image}"
+                alt = "${member.name}"
                     loading= "lazy">
                     
-                    <h2>${members.name}</h2>
+                    <h2>${member.name}</h2>
 
-                    <p>${members.address}</p>
+                    <p>${member.address}</p>
 
-                    <p>${members.phone}</p>
+                    <p>${member.phone}</p>
 
-                    <p>${members.industry}</p>
+                    <p>${member.industry}</p>
 
-                    <a href= "${members.website}" target = "_blank">
+                    <a href= "${member.website}" target = "_blank">
                         Visit Website
                     </a>
 
@@ -53,7 +54,7 @@ function displayMembers(members) {
     });
 }
 
-// ===== START ===== //
+// ===== Start ===== //
 
 getMembers();
 
@@ -73,3 +74,13 @@ function showList() {
 	display.classList.add("list");
 	display.classList.remove("grid");
 }
+
+// ===== CURRENT YEAR ===== //
+const currentYear = new Date().getFullYear();
+
+document.querySelector('#currentyear').textContent = currentYear;
+
+// ===== LAST MODIFIED DATE ===== //
+const lastModified = document.lastModified;
+
+document.querySelector('#lastModified').textContent = `Last Modification: ${lastModified}`;
