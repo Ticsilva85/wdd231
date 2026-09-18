@@ -37,7 +37,7 @@ function displayMembers(members) {
                     
                     <h2>${members.name}</h2>
 
-                    <p>${members.adress}</p>
+                    <p>${members.address}</p>
 
                     <p>${members.phone}</p>
 
@@ -56,3 +56,20 @@ function displayMembers(members) {
 // ===== START ===== //
 
 getMembers();
+
+// ===== BUTTON TO GRID OR LIST ===== //
+
+const gridbutton = document.querySelector("#grid");
+const listbutton = document.querySelector("#list");
+const display = document.querySelector("#directory");
+
+gridbutton.addEventListener("click", () => {
+	display.classList.add("grid");
+	display.classList.remove("list");
+});
+
+listbutton.addEventListener("click", showList); 
+function showList() {
+	display.classList.add("list");
+	display.classList.remove("grid");
+}
