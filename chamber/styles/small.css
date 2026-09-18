@@ -1,0 +1,117 @@
+:root {
+    --primary-color: #2E56A6; /* Recife Blue */
+    --secondary-color: #03A63C; /* Pernambuco Green */
+    --color-background: #F2F2F2; /* Off-white */
+    --text-color: #182d57; /* Deep Ultramarine Blue */
+    --accent-color: #BF4141;/* Coral */
+    --accent-color-second: #F2A20C; /* Golden */
+
+    --heading-font: "Fira Sans", sans-serif;
+    --body-font: "PT Serif", serif;
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    width: 100%;
+    min-height: 100%;
+}
+
+/* ===== HEADER ===== */
+
+header {
+    position: relative;
+    display: grid;
+    grid-template-columns: 50px auto 60px;
+    padding: 5px 0 5px 10px;
+    background-color: var(--primary-color);
+    align-items: center;
+    column-gap: 10px;
+    width: 100%;
+    height: 80px;
+}
+
+header img {
+    display: block;
+}
+
+.title {
+    font-family: var(--heading-font);
+    color: var(--color-background);
+    font-size: 1.5rem;
+    font-weight: bold;
+    justify-content: start;
+}
+
+.mobile-break {
+    display: inline;
+}
+
+.chamber {
+    font-weight: lighter;
+    font-size: 1.2rem;
+}
+
+/* ===== HAMBURGER MENU ===== */
+.hamburger {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    right: 0px;
+}
+
+.hamburger::after {
+    content: "\2630";
+}
+
+.hamburger.show::after {
+    content: "\00D7";
+    font-size: 3rem;
+    font-weight: lighter;
+}
+
+/* ===== NAVIGATION MENU ===== */
+.nav-menu {
+    display: none;
+    font-family: var(--heading-font);
+    font-size: 1.2rem;
+}
+
+.navigation .active {
+    color: var(--text-color);
+    background-color:var(--accent-color-second);
+    opacity: 0.8;
+}
+
+.nav-menu.show {
+    font-weight: bold;
+    display: block;
+    position: absolute;
+    top: 80px;
+    right: 0;
+    width: 50%;
+    background-color: var(--primary-color);
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.nav-menu ul {
+    padding: 0;
+}
+
+.nav-menu ul li {
+    list-style: none;
+}
+
+.nav-menu ul li a {
+    display: block;
+    padding: 15px;
+    text-align: center;
+    text-decoration: none;
+    color: var(--color-background);
+}

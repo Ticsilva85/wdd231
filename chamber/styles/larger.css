@@ -1,3 +1,76 @@
-* {
-    background-color: purple;
+@media only screen and (min-width: 825px) {
+:root {
+    --primary-color: #2E56A6; /* Recife Blue */
+    --secondary-color: #03A63C; /* Pernambuco Green */
+    --color-background: #F2F2F2; /* Off-white */
+    --text-color: #182d57; /* Deep Ultramarine Blue */
+    --accent-color: #BF4141;/* Coral */
+    --accent-color-second: #F2A20C; /* Golden */
+
+    --heading-font: "Fira Sans", sans-serif;
+    --body-font: "PT Serif", serif;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 5px 20px;
+}
+
+img {
+    width: 50px;
+}
+
+.title {
+    font-size: 2rem;
+    flex: 1;
+}
+
+.mobile-break {
+    display: none;
+}
+
+.hamburger {
+    display: none;
+}
+
+.nav-menu {
+    display: block;
+    width: 400px;
+}
+
+.navigation {
+    display: flex;
+    width: 100%;
+    padding: 0;
+}
+
+.navigation .active {
+    opacity: 1;
+}
+
+.navigation li {
+    flex: 1;
+    text-align: center;
+}
+
+.navigation li a {
+    display: block;
+    font-weight: bold;
+    width: 100%;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.navigation li a:hover {
+    background-color: var(--accent-color);
+    color: var(--color-background);
+}
+
 }
