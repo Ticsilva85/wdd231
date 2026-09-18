@@ -6,10 +6,15 @@
     <title>Recife Chamber of Commerce</title>
     <meta name="description" content="Homepage for the Recife Chamber of Commerce">
     <meta name="author" content="Tiago Cavalcante da Silva">
+
+    <!-- STYLE -->
     <link rel="stylesheet" href="./styles/small.css">
     <link rel="stylesheet" href="./styles/larger.css">
     <link rel="stylesheet" href="./styles/normalize.css">
+
+    <!-- JS -->
     <script src="./scripts/directory.js" defer></script>
+    <script src="./data/members.json"></script>
 
     <!-- META CONTENT -->
     <meta property="og:title" content="Recife Chamber of Commerce">
@@ -45,6 +50,12 @@
     <main>
         <h1>Directory</h1>
 
+        <div class="companies-menu">
+            <button id="grid">Grid</button>
+            <button id="list">List</button>
+        </div>
+
+        <div class="directory-container" id="directory"></div>
     </main>
 
     <footer>

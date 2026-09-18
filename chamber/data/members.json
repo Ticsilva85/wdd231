@@ -1,0 +1,72 @@
+[
+  {
+    "name": "Ferreira Costa",
+    "address": "Av. Mascarenhas de Morais, 2929/2967, Imbiribeira, Recife - PE, 51150-905",
+    "phone": "0800 8383 083",
+    "website": "https://www.ferreiracosta.com/",
+    "image": "ferreira-costa.webp",
+    "membershipLevel": 3,
+    "industry": "Home Center / Construction",
+    "description": "Retail company specializing in construction materials, home improvement, decoration, furniture and household products."
+  },
+  {
+    "name": "Porto Digital",
+    "address": "Cais do Apolo, 222, Bairro do Recife, Recife - PE, 50030-230",
+    "phone": "",
+    "website": "https://www.portodigital.org/",
+    "image": "porto-digital.webp",
+    "membershipLevel": 3,
+    "industry": "Technology and Innovation",
+    "description": "Technology and innovation district located in Recife's historic center, bringing together companies, institutions and innovation initiatives."
+  },
+  {
+    "name": "CESAR",
+    "address": "Rua Bione, Cais do Apolo, 220, Recife - PE",
+    "phone": "+55 (81) 3425-4700",
+    "website": "https://www.cesar.org.br/",
+    "image": "cesar.webp",
+    "membershipLevel": 3,
+    "industry": "Technology and Innovation",
+    "description": "Innovation center focused on technology, digital transformation, research and development of customized solutions."
+  },
+  {
+    "name": "Tempest",
+    "address": "Rua da Alfândega, 35, Loja 201, Paço Alfândega, Bairro do Recife, Recife - PE, 50030-030",
+    "phone": "+55 (81) 3419-0800",
+    "website": "https://www.tempest.com.br/",
+    "image": "tempest.webp",
+    "membershipLevel": 3,
+    "industry": "Cybersecurity",
+    "description": "Cybersecurity company providing security consulting, threat intelligence, penetration testing and managed security services."
+  },
+  {
+    "name": "Baterias Moura",
+    "address": "Rua de São Jorge, 240, Recife Antigo, Recife - PE, 50030-240",
+    "phone": "+55 (81) 3180-7500",
+    "website": "https://www.moura.com.br/",
+    "image": "baterias-moura.webp",
+    "membershipLevel": 2,
+    "industry": "Automotive and Energy",
+    "description": "Brazilian battery manufacturer offering solutions for automotive, motorcycle, industrial, nautical and energy storage applications."
+  },
+  {
+    "name": "CESAR School",
+    "address": "Rua Bione, Cais do Apolo, 220, Recife - PE",
+    "phone": "+55 (81) 3425-4700",
+    "website": "https://www.cesar.school/",
+    "image": "cesar-school.webp",
+    "membershipLevel": 2,
+    "industry": "Education and Technology",
+    "description": "Educational institution focused on technology, innovation and professional development."
+  },
+  {
+    "name": "Solar Coca-Cola",
+    "address": "Recife - PE",
+    "phone": "",
+    "website": "https://www.solarbr.com.br/",
+    "image": "solar-coca-cola.webp",
+    "membershipLevel": 2,
+    "industry": "Food and Beverage",
+    "description": "One of the major Coca-Cola bottlers in Brazil, operating across several states in the North and Northeast regions."
+  }
+]
