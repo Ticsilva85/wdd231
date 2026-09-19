@@ -37,13 +37,14 @@
 
         <button id="menu" class="hamburger" aria-label="Open navigation menu" aria-expanded="false"></button>
 
-        <nav class="nav-menu" aria-label="Main Navigation">
+        <nav class="nav-menu" id="header-menu" aria-label="Main Navigation">
             <ul class="navigation">
                 <li><a href="home.html">Home</a></li>
                 <li><a href="directory.html" class="active">Directory</a></li>
                 <li><a href="join.html">Join</a></li>
                 <li><a href="discover.html">Discover</a></li>
             </ul>
+            <span class="line"></span>
         </nav>
     </header>
 
@@ -51,8 +52,12 @@
         <h1>Directory</h1>
 
         <div class="companies-menu">
-            <button id="grid">Grid</button>
-            <button id="list">List</button>
+            <button id="grid">
+                <img src="./images/grid.svg" alt="Grid view"> 
+            </button>
+            <button id="list">
+                <img src="./images/list.svg" alt="List view">
+            </button>
         </div>
 
         <div class="directory-container grid" id="directory"></div>

@@ -1,9 +1,7 @@
 :root {
     --primary-color: #2E56A6; /* Recife Blue */
-    --secondary-color: #03A63C; /* Pernambuco Green */
     --color-background: #F2F2F2; /* Off-white */
     --text-color: #182d57; /* Deep Ultramarine Blue */
-    --accent-color: #BF4141;/* Coral */
     --accent-color-second: #F2A20C; /* Golden */
 
     --heading-font: "Fira Sans", sans-serif;
@@ -63,7 +61,6 @@ header img {
     font-size: 2rem;
     color: white;
     cursor: pointer;
-    right: 0px;
 }
 
 .hamburger::after {
@@ -122,6 +119,30 @@ header img {
 h1 {
     font-family: var(--heading-font);
     padding: 20px;
+}
+
+/* ===== Buttons Grid and List */
+.companies-menu {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+#grid, #list {
+    border: none;
+    background-color: var(--text-color);
+    padding: 10px 20px;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    transition: transform ease 0.3s;
+}
+
+#grid:hover, #list:hover {
+    transform: scale(1.2);
+}
+
+#grid img, #list img {
+    width: 30px;
 }
 
 /* ===== Directory Grid ===== */

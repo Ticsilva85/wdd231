@@ -63,13 +63,12 @@ img {
     font-weight: bold;
     width: 100%;
     padding: 10px;
-    transition: background-color 0.5s ease;
-    
+    transition: background-color ease 0.3s;
 }
 
 .navigation li a:hover {
-    background-color: var(--accent-color);
-    color: var(--color-background);
+    background-color: var(--color-background);
+    color: var(--text-color);
 }
 
 /* ===== MAIN ===== */
