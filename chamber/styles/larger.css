@@ -115,7 +115,7 @@ main {
     gap: 15px;
     padding: 12px 10px;
     border: none;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid var(--color-background);
     border-radius: 0;
     box-shadow: none;
     text-align: left;
