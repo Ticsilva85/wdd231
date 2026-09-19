@@ -63,10 +63,19 @@ img {
     font-weight: bold;
     width: 100%;
     padding: 10px;
-    transition: background-color ease 0.3s;
+    transition: color ease 0.3s;
 }
 
 .navigation li a:hover {
+    color: var(--accent-color-second);
+}
+
+.navigation .active {
+    transition: background-color ease 0.es,
+                color ease 0.3s;
+}
+
+.navigation .active:hover {
     background-color: var(--color-background);
     color: var(--text-color);
 }
@@ -136,4 +145,26 @@ main {
     display: inline-block;
     width: fit-content;
 }
+}
+
+/* ===== FOOTER ===== */
+
+.footer-larger {
+    display: flex;
+    gap: 20px;
+    justify-content: space-around;
+    padding: 10px 20px;
+}
+
+.footer-menu {
+    padding: 20px;
+}
+
+.footer-menu ul {
+    display: grid;
+    text-align: center;
+}
+
+.footer-menu ul li  {
+    padding: 10px; 
 }
