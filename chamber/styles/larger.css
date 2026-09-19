@@ -22,7 +22,7 @@ header {
     box-sizing: border-box;
 }
 
-img {
+header > img {
     width: 50px;
 }
 
@@ -99,6 +99,7 @@ main {
     justify-content: center;
     gap: 20px;
     padding: 20px;
+    min-height: 1100px;
 }
 
 /* ===== Directory Container List ===== */
