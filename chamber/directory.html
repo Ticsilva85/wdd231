@@ -8,9 +8,10 @@
     <meta name="author" content="Tiago Cavalcante da Silva">
 
     <!-- STYLE -->
+    <link rel="stylesheet" href="./styles/normalize.css">
     <link rel="stylesheet" href="./styles/small.css">
     <link rel="stylesheet" href="./styles/larger.css">
-    <link rel="stylesheet" href="./styles/normalize.css">
+
 
     <!-- JS -->
     <script src="./scripts/directory.js" defer></script>
@@ -33,7 +34,7 @@
 
 <body>
     <header>
-        <img src="images/commerce.svg" alt="Recife Chamber of Commerce icon">
+        <img src="images/commerce.svg" alt="Recife Chamber of Commerce icon" width="50" height="50">
         <span class="title">Recife <span class="mobile-break"><br></span><span class="chamber">Chamber of Commerce</span></span>
 
         <button id="menu" class="hamburger" aria-label="Open navigation menu" aria-expanded="false"></button>
@@ -61,7 +62,9 @@
             </button>
         </div>
 
-        <div class="directory-container grid" id="directory"></div>
+        <div class="directory-container grid" id="directory">
+            <p class="loading">Loading directory...</p>
+        </div>
     </main>
 
     <footer>

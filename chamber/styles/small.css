@@ -33,8 +33,10 @@ header {
     height: 80px;
 }
 
-header img {
+header > img {
     display: block;
+    width: 50px;
+    height: 50px;
 }
 
 .title {
@@ -118,6 +120,13 @@ header img {
 h1 {
     font-family: var(--heading-font);
     padding: 20px;
+}
+
+.loading {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 50px;
+    font-family: var(--heading-font);
 }
 
 /* ===== Buttons Grid and List */

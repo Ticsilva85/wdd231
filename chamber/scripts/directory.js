@@ -16,41 +16,56 @@ navbutton.addEventListener('click', () => {
 const directory = document.querySelector('#directory');
 
 async function getMembers() {
-    const response = await fetch('./data/members.json');
-    const data = await response.json();
+    try {
+        const response = await fetch('./data/members.json');
 
-    displayMembers(data);
+        if (!response.ok) {
+            throw new Error('Unable to load member data.');
+        }
+
+        const data = await response.json();
+
+        displayMembers(data);
+
+    } catch (error) {
+        directory.innerHTML = '<p>Unable to load the directory.</p>';
+        console.error(error);
+    }
 }
 
 // ===== Display Members ===== //
 function displayMembers(members) {
 
-    members.forEach(member => {
+    directory.innerHTML = "";
 
+    members.forEach(member => {
         const card = document.createElement('article');
 
         card.classList.add('member-card');
 
         card.innerHTML = `
-            <img src="./images/${member.image}"
-                alt = "${member.name}"
-                    loading= "lazy">
-                    
-                    <h2>${member.name}</h2>
+            <img 
+                src="./images/${member.image}"
+                alt="${member.name}"
+                width="150"
+                height="100"
+                loading="lazy"
+            >
 
-                    <p>${member.address}</p>
+            <h2>${member.name}</h2>
 
-                    <p>${member.phone}</p>
+            <p>${member.address}</p>
 
-                    <p>${member.industry}</p>
+            <p>${member.phone}</p>
 
-                    <a href= "${member.website}" target = "_blank">
-                        Visit Website
-                    </a>
+            <p>${member.industry}</p>
 
-                `;
+            <a href="${member.website}" target="_blank" rel="noopener noreferrer">
+                Visit Website
+            </a>
+        `;
 
-                directory.appendChild(card);
+        directory.appendChild(card);
     });
 }
 

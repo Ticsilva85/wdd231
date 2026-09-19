@@ -17,6 +17,9 @@ header {
     align-items: center;
     gap: 20px;
     padding: 5px 20px;
+    height: 80px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 img {
