@@ -265,15 +265,20 @@ footer {
 
 /* ===== Footer Navigation ===== */
 
+.footer-menu {
+    padding: 40px;
+}
+
 .footer-menu ul {
-    display: flex;
+    display: grid;
     width: 100%;
     padding: 0;
-    justify-content: center;
+    text-align: center;
 }
 
 .footer-menu li {
     list-style: none;
+    padding: 20px;
 }
 
 .footer-menu a {

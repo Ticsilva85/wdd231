@@ -71,7 +71,7 @@ img {
 }
 
 .navigation .active {
-    transition: background-color ease 0.es,
+    transition: background-color ease 0.3s,
                 color ease 0.3s;
 }
 
@@ -145,10 +145,9 @@ main {
     display: inline-block;
     width: fit-content;
 }
-}
+
 
 /* ===== FOOTER ===== */
-
 .footer-larger {
     display: flex;
     gap: 20px;
@@ -160,11 +159,7 @@ main {
     padding: 20px;
 }
 
-.footer-menu ul {
-    display: grid;
-    text-align: center;
-}
-
 .footer-menu ul li  {
     padding: 10px; 
+}
 }
