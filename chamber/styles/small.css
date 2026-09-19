@@ -272,11 +272,11 @@ footer {
     justify-content: center;
 }
 
-.footer-menu ul li {
+.footer-menu li {
     list-style: none;
 }
 
-.footer-menu ul li a {
+.footer-menu a {
     color: var(--color-background);
     text-decoration: none;
     font-weight: bold;
@@ -303,3 +303,17 @@ footer {
 }
 
 /* ===== Footer Notes ===== */
+.footer-notes {
+    text-align: center;
+    color: var(--color-background);
+    padding: 20px;
+}
+
+.footer-notes p {
+    padding: 5px;
+}
+
+.footer-notes .course {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
