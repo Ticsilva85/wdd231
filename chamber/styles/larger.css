@@ -188,7 +188,7 @@ main {
 /* ===== MAIN ===== */
 .holy-graal {
     display: grid;
-    grid-template-columns: 40% auto;
+    grid-template-columns: 2fr 3fr;
     gap: 40px;
 }
 
@@ -239,6 +239,30 @@ main {
     grid-template-columns: 1fr 1fr;
     max-width: 800px;
     margin: 0 auto;
+}
+
+/* ===== COMPANY SPOTLIGHTS ===== */
+
+.spotlights {
+    padding: 40px 15px;
+}
+
+.spotlights-container {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.spotlight-card {
+    display: block;
+    text-align: center;
+}
+
+.spotlight-card img {
+    display: block;
+    margin: 0 auto 15px;
+}
+
+.spotlight-content h3 {
+    font-size: 1.3rem;
 }
 
 }
