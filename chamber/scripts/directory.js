@@ -71,7 +71,9 @@ function displayMembers(members) {
 
 // ===== Start ===== //
 
-getMembers();
+if (directory) {
+    getMembers();
+}
 
 // ===== BUTTON TO GRID OR LIST ===== //
 
@@ -79,15 +81,16 @@ const gridbutton = document.querySelector("#grid");
 const listbutton = document.querySelector("#list");
 const display = document.querySelector("#directory");
 
-gridbutton.addEventListener("click", () => {
-	display.classList.add("grid");
-	display.classList.remove("list");
-});
+if (gridbutton && listbutton && display) {
+    gridbutton.addEventListener("click", () => {
+        display.classList.add("grid");
+        display.classList.remove("list");
+    });
 
-listbutton.addEventListener("click", showList); 
-function showList() {
-	display.classList.add("list");
-	display.classList.remove("grid");
+    listbutton.addEventListener("click", () => {
+        display.classList.add("list");
+        display.classList.remove("grid");
+    });
 }
 
 // ===== CURRENT YEAR ===== //
@@ -101,19 +104,26 @@ const lastModified = document.lastModified;
 document.querySelector('#lastModified').textContent = `Last Modification: ${lastModified}`;
 
 // ===== PICTURE CAROUSEL JOIN PAGE ===== //
+// ===== PICTURE CAROUSEL ===== //
+
 const carouselTrack = document.querySelector(".carousel-track");
-const carouselSlides = document.querySelector(".carousel-track picture");
+const carouselSlides = document.querySelectorAll(".carousel-track picture");
 
-let currentSlide = 0;
+if (carouselTrack && carouselSlides.length > 0) {
 
-function nextSlide() {
-    currentSlide++;
+    let currentSlide = 0;
 
-    if (currentSlide >= carouselSlides.length) {
-        currentSlide = 0;
+    function nextSlide() {
+        carouselSlides[currentSlide].style.opacity = "0";
+
+        currentSlide++;
+
+        if (currentSlide >= carouselSlides.length) {
+            currentSlide = 0;
+        }
+
+        carouselSlides[currentSlide].style.opacity = "1";
     }
 
-    carouselTrack.style.transform = `translateX(-${currentSlide * 100}%)`;
+    setInterval(nextSlide, 4000);
 }
-
-setInterval(nextSlide, 4000);

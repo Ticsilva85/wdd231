@@ -184,15 +184,26 @@ main {
 }
 
 .carousel-track {
+    position: relative;
+    width: 100%;
     height: 100%;
 }
 
 .carousel-track picture {
+    position: absolute;
+    inset: 0;
+    width: 100%;
     height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.carousel-track picture:first-child {
+    opacity: 1;
 }
 
 .carousel-track img {
-    width: 199%;
+    width: 100%;
     height: 100%;
     object-fit: cover;
 }
