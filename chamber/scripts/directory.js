@@ -99,3 +99,21 @@ document.querySelector('#currentyear').textContent = currentYear;
 const lastModified = document.lastModified;
 
 document.querySelector('#lastModified').textContent = `Last Modification: ${lastModified}`;
+
+// ===== PICTURE CAROUSEL JOIN PAGE ===== //
+const carouselTrack = document.querySelector(".carousel-track");
+const carouselSlides = document.querySelector(".carousel-track picture");
+
+let currentSlide = 0;
+
+function nextSlide() {
+    currentSlide++;
+
+    if (currentSlide >= carouselSlides.length) {
+        currentSlide = 0;
+    }
+
+    carouselTrack.style.transform = `translateX(-${currentSlide * 100}%)`;
+}
+
+setInterval(nextSlide, 4000);
