@@ -13,6 +13,7 @@
 
 header {
     position: fixed;
+    z-index: 1000;
     display: flex;
     align-items: center;
     gap: 20px;
@@ -150,8 +151,11 @@ main {
     width: fit-content;
 }
 
-
 /* ===== FOOTER ===== */
+.footer-header {
+    text-align: left;
+}
+
 .footer-larger {
     display: flex;
     gap: 20px;
@@ -167,6 +171,17 @@ main {
     padding: 10px; 
 }
 
+.footer-menu ul.footer-navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: auto;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
 
 /* +++++ INDEX.HTML +++++ */
 
@@ -207,6 +222,15 @@ main {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+/* ===== Events List ===== */
+.events-container {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.events {
+    padding: 40px 15px;
 }
 
 }
