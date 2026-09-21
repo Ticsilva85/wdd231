@@ -17,6 +17,7 @@ html,
 body {
     margin: 0;
     width: 100%;
+    color: var(--text-color);
 }
 
 /* ===== HEADER ===== */
@@ -433,7 +434,7 @@ footer {
 
 .event-card {
     padding: 20px;
-    background-color: white;
+    background-color: var(--color-background);
     border-radius: 10px;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
 }
@@ -480,7 +481,7 @@ footer {
 
 .weather-current,
 .weather-details {
-    background-color: white;
+    background-color: var(--color-background);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
@@ -540,7 +541,7 @@ footer {
     gap: 20px;
     align-items: center;
     padding: 20px;
-    background-color: white;
+    background-color:var(--color-background);
     border-radius: 10px;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
 }
