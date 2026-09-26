@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recife Chamber of Commerce Directory</title>
+    <title>Recife Chamber of Commerce Home</title>
     <meta name="description" content="Explore the Recife Chamber of Commerce directory and discover local businesses and organizations.">
     <meta name="author" content="Tiago Cavalcante da Silva">
 
@@ -20,7 +20,7 @@
     <meta property="og:title" content="Recife Chamber of Commerce">
     <meta property="og:description" content="Explore the Recife Chamber of Commerce directory and discover local businesses and organizations.">
     <meta property="og:image" content="https://ticsilva85.github.io/wdd231/chamber/images/og-image.webp">
-    <meta property="og:url" content="https://ticsilva85.github.io/wdd231/chamber/directory.html">
+    <meta property="og:url" content="https://ticsilva85.github.io/wdd231/chamber/home.html">
     <meta property="og:type" content="website">
 
     <!-- FAVICON -->
@@ -57,34 +57,19 @@
                 <h2>Building a Stronger Business Community</h2>
 
                 <p>We connect local businesses, create opportunities, and support economic growth in Recife. Together, we can build a stronger and more connected business community.</p>
-
-                <a href="join.html" class="join-btn">Join Us!</a>
             </div>
 
-            <section class="carousel">
-                <div class="carousel-track">
-                    <picture>
-                        <source media="(min-width: 768px)" srcset="./images/carousel-horizontal/card-img1.webp">
-                        <img src="./images/carousel-vertical/card-img1.webp" alt="Recife Chamber of Commerce" width="800" height="500" fetchpriority="high">
-                    </picture>
-                    <picture>
-                        <source media="(min-width: 768px)" srcset="./images/carousel-horizontal/card-img2.webp">
-                        <img src="./images/carousel-vertical/card-img2.webp" alt="Recife Chamber of Commerce" width="800" height="500" loading="lazy">
-                    </picture>
-                    <picture>
-                        <source media="(min-width: 768px)" srcset="./images/carousel-horizontal/card-img3.webp">
-                        <img src="./images/carousel-vertical/card-img3.webp" alt="Recife Chamber of Commerce" width="800" height="500" loading="lazy">
-                    </picture>
-                    <picture>
-                        <source media="(min-width: 768px)" srcset="./images/carousel-horizontal/card-img4.webp">
-                        <img src="./images/carousel-vertical/card-img4.webp" alt="Recife Chamber of Commerce" width="800" height="500" loading="lazy">
-                    </picture>
-                    <picture>
-                        <source media="(min-width: 768px)" srcset="./images/carousel-horizontal/card-img5.webp">
-                        <img src="./images/carousel-vertical/card-img5.webp" alt="Recife Chamber of Commerce" width="800" height="500" loading="lazy">
-                    </picture>
-                </div>
-            </section>
+        <div class="hero">
+            <picture>
+                <source media="(min-width: 825px)" srcset="./images/carousel-horizontal/card-img5.webp">
+                <img 
+                    src="./images/carousel-vertical/card-img1.webp" 
+                    alt="Recife Chamber of Commerce"
+                    fetchpriority="high">
+            </picture>
+
+            <a href="join.html" class="join-btn">Join Us!</a>
+        </div>
         </section>
 
         <section class="events">
@@ -142,6 +127,14 @@
                     <p><strong>Sunset:</strong> <span id="sunset"></span></p>
                 </div>
             </div>
+
+            <div class="forecast">
+                <h3>3-Day Forecast</h3>
+
+                <div class="forecast-container" id="forecast-container">
+                    <!-- Forecast cards will be inserted here -->
+                </div>
+            </div>
         </section>
 
         <section class="spotlights">
@@ -163,17 +156,6 @@
                 <p>Recife, PE 50030-230</p>
                 <p><a href="mailto:info@recifechamber.org">info@recifechamber.org</a></p>
                 <p>(81) 3333-2450</p>
-            </div>
-
-            <div class="footer-nav">
-                <nav class="footer-menu" aria-label="Main Navigation">
-                    <ul class="footer-navigation">
-                        <li><a href="home.html"  class="active">Home</a></li>
-                        <li><a href="directory.html">Directory</a></li>
-                        <li><a href="join.html">Join</a></li>
-                        <li><a href="discover.html">Discover</a></li>
-                    </ul>
-                </nav>
             </div>
         </div>
             <div class="footer-notes">

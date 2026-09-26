@@ -278,50 +278,6 @@ footer {
     text-decoration: underline;
 }
 
-/* ===== Footer Navigation ===== */
-
-.footer-menu {
-    padding: 40px;
-}
-
-.footer-menu ul {
-    display: grid;
-    width: 100%;
-    padding: 0;
-    text-align: center;
-}
-
-.footer-menu li {
-    list-style: none;
-    padding: 20px;
-}
-
-.footer-menu a {
-    color: var(--color-background);
-    text-decoration: none;
-    font-weight: bold;
-    padding: 10px ;
-    font-size: 1.2rem;
-    transition: color ease 0.3s;
-}
-
-.footer-menu a:hover {
-    color: var(--accent-color-second);
-}
-
-.footer-menu .active {
-    background-color: var(--accent-color-second);
-    color: var(--text-color);
-    transition: color ease 0.3s,
-                background-color ease 0.3s;
-
-}
-
-.footer-menu .active:hover {
-    background-color: var(--color-background);
-    color: var(--text-color);
-}
-
 /* ===== Footer Notes ===== */
 .footer-notes {
     text-align: center;
@@ -364,56 +320,47 @@ footer {
     padding: 20px 10px;
 }
 
+.hero {
+    position: relative;
+    width: 100%;
+}
+
+.hero picture {
+    display: block;
+    width: 100%;
+}
+
+.hero img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
 .join-btn {
+    position: absolute;
+    left: 50%;
+    bottom: 30px;
+    transform: translateX(-50%);
+
     display: block;
     text-decoration: none;
+    text-align: center;
     width: fit-content;
+
     background-color: var(--accent-color-second);
     color: var(--text-color);
+
     font-family: var(--heading-font);
-    margin: 2rem auto;
     padding: 15px 30px;
-    font-size: 2rem;
+
+    font-size: 1.6rem;
     font-weight: bolder;
+
     border-radius: 15px;
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5)
-}
 
-/* ===== Carousel ===== */
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
 
-.carousel {
-    position: relative;
-    width: 100%;
-    height: 500px;
-    overflow: hidden;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
-    border-radius: 15px;
-}
-
-.carousel-track {
-    position: relative;
-    width: 100%;
-    height: 100%;
-}
-
-.carousel-track picture {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-}
-
-.carousel-track picture:first-child {
-    opacity: 1;
-}
-
-.carousel-track img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    z-index: 2;
 }
 
 /* ===== Events List ===== */
@@ -515,6 +462,53 @@ footer {
 .weather-details p {
     font-family: var(--body-font);
     padding: 8px 0;
+}
+
+/* ===== 3-Day Forecast ===== */
+
+.forecast {
+    margin-top: 30px;
+}
+
+.forecast > h3 {
+    font-family: var(--heading-font);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.forecast-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.forecast-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+    text-align: center;
+}
+
+.forecast-card h4 {
+    font-family: var(--heading-font);
+    margin-bottom: 10px;
+}
+
+.forecast-card img {
+    display: block;
+    margin: 0 auto;
+}
+
+.forecast-card p {
+    font-family: var(--body-font);
+    margin: 5px 0;
+}
+
+.forecast-temperature {
+    font-family: var(--heading-font) !important;
+    font-size: 1.5rem;
+    font-weight: bold;
 }
 
 /* ===== COMPANY SPOTLIGHTS ===== */

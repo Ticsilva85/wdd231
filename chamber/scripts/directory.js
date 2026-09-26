@@ -136,14 +136,21 @@ if (weatherSection) {
     const apiKey = "fb0da35787f440c444ce340835a10ada";
     const city = "Recife,BR";
 
-    const weatherURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric&lang=en`;
+    const currentWeatherURL =
+        `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric&lang=en`;
+
+    const forecastURL =
+        `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric&lang=en`;
+
+
+    // ===== GET CURRENT WEATHER ===== //
 
     async function getWeather() {
         try {
-            const response = await fetch(weatherURL);
+            const response = await fetch(currentWeatherURL);
 
             if (!response.ok) {
-                throw new Error("Unable to fetch weather data.");
+                throw new Error("Unable to fetch current weather data.");
             }
 
             const data = await response.json();
@@ -154,6 +161,9 @@ if (weatherSection) {
             console.error(error);
         }
     }
+
+
+    // ===== DISPLAY CURRENT WEATHER ===== //
 
     function displayWeather(data) {
         document.querySelector("#temperature").textContent =
@@ -184,6 +194,90 @@ if (weatherSection) {
             formatTime(data.sys.sunset);
     }
 
+
+    // ===== GET 3-DAY FORECAST ===== //
+
+    async function getForecast() {
+        try {
+            const response = await fetch(forecastURL);
+
+            if (!response.ok) {
+                throw new Error("Unable to fetch forecast data.");
+            }
+
+            const data = await response.json();
+
+            displayForecast(data);
+
+        } catch (error) {
+            console.error(error);
+        }
+    }
+
+
+    // ===== DISPLAY FORECAST ===== //
+
+    function displayForecast(data) {
+        const forecastContainer =
+            document.querySelector("#forecast-container");
+
+        forecastContainer.innerHTML = "";
+
+        const dailyForecasts = {};
+
+        data.list.forEach(forecast => {
+            const date = forecast.dt_txt.split(" ")[0];
+
+            if (!dailyForecasts[date]) {
+                dailyForecasts[date] = forecast;
+            }
+        });
+
+        const forecastDays = Object.values(dailyForecasts).slice(1, 4);
+
+        forecastDays.forEach(forecast => {
+            const date = new Date(forecast.dt * 1000);
+
+            const card = document.createElement("article");
+            card.classList.add("forecast-card");
+
+            card.innerHTML = `
+                <h4>${formatDate(date)}</h4>
+
+                <img
+                    src="https://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png"
+                    alt="${forecast.weather[0].description}"
+                    width="70"
+                    height="70"
+                >
+
+                <p class="forecast-temperature">
+                    ${Math.round(forecast.main.temp)}°C
+                </p>
+
+                <p>
+                    ${forecast.weather[0].description}
+                </p>
+            `;
+
+            forecastContainer.appendChild(card);
+        });
+    }
+
+
+    // ===== FORMAT DATE ===== //
+
+    function formatDate(date) {
+        return date.toLocaleDateString("en-US", {
+            weekday: "short",
+            month: "short",
+            day: "numeric"
+        });
+    }
+
+
+    // ===== FORMAT TIME ===== //
+
     function formatTime(timestamp) {
         const date = new Date(timestamp * 1000);
 
@@ -193,7 +287,11 @@ if (weatherSection) {
         });
     }
 
+
+    // ===== INITIALIZE WEATHER ===== //
+
     getWeather();
+    getForecast();
 }
 
 // ===== COMPANY SPOTLIGHTS ===== //
