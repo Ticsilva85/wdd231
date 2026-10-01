@@ -369,3 +369,9 @@ if (spotlightsContainer) {
 
     getSpotlights();
 }
+
+// ===== JOIN PAGE ===== //
+// ===== Time stamp information ===== //
+const timestamp = document.querySelector("#timestamp");
+
+timestamp.value = new Date().toISOString();
