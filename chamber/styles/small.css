@@ -2,6 +2,7 @@
     --primary-color: #2E56A6; /* Recife Blue */
     --color-background: #F2F2F2; /* Off-white */
     --text-color: #182d57; /* Deep Ultramarine Blue */
+    --accent-color: #BF4141;/* Coral */
     --accent-color-second: #F2A20C; /* Golden */
 
     --heading-font: "Fira Sans", sans-serif;
@@ -361,6 +362,13 @@ footer {
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
 
     z-index: 2;
+
+    transition: background-color ease 0.3s;
+}
+
+.join-btn:hover {
+    background-color: var(--accent-color);
+    color: var(--color-background);
 }
 
 /* ===== Events List ===== */
@@ -639,60 +647,151 @@ label {
     font-size: 1.6rem;
     font-weight: bolder;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+    transition: background-color ease 0.3ms;
+}
+
+.join-button:hover {
+    background-color: var(--color-background);
+    color: var(--text-color);
 }
 
 /* ===== Membership Cards ===== */
-
+/* ===== Individual Cards ===== */
 .cards {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 20px;
 
+    width: 100%;
     padding: 20px;
     font-family: var(--heading-font);
 }
 
 .cards h2 {
     text-align: center;
-    margin: 0 0 10px;
+    margin-bottom: 10px;
 }
 
-/* ===== Individual Cards ===== */
-
-.card1, 
-.card2, 
-.card3, 
-.card4 {
-    display:flex;
+.membership-card {
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 20px;
 
     width: 100%;
-    max-width: 200px;
+    max-width: 300px;
     min-height: 150px;
     padding: 20px;
 
     border-radius: 15px;
     background-color: var(--primary-color);
     color: var(--color-background);
+
     text-align: center;
 }
 
-.cards h3 {
+.membership-card h3 {
     font-size: 1.5rem;
     margin: 0;
 }
 
-.cards a {
+.membership-card a {
     display: inline-block;
+
+    padding: 10px 15px;
+
+    background-color: var(--accent-color-second);
+    color: var(--text-color);
+    font-weight: bolder;
+
     text-decoration: none;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+    transition: background-color ease 0.3s;
+}
+
+.membership-card a:hover {
+    background-color: var(--color-background);
+    color: var(--text-color);
+}
+
+dialog {
+    width: 90%;
+    max-width: 500px;
+
+    border: none;
+    border-radius: 15px;
+    padding: 30px;
+
+    margin: auto;
+
+    background-color: var(--primary-color);
+    color: var(--color-background);
+
+    font-family: var(--body-font);
+}
+
+dialog h2 {
+    margin: 0 0 15px;
+    padding: 0;
+
+    font-family: var(--heading-font);
+    font-size: 1.6rem;
+    text-align: center;
+}
+
+dialog p {
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+dialog h3 {
+    margin: 15px 0 10px;
+    padding: 0;
+
+    font-family: var(--heading-font);
+}
+
+dialog ul {
+    margin: 0 0 20px;
+    padding-bottom: 20px;
+    list-style: none;
+}
+
+dialog li {
+    font-size: 1rem;
+    margin-bottom: 8px;
+}
+
+dialog::backdrop {
+    background-color: rgb(0 0 0 / 60%);
+}
+
+.close-dialog {
+    display: block;
+
+    margin: 20px auto 0;
+    padding: 10px 20px;
+
+    border: none;
+    border-radius: 5px;
 
     background-color: var(--accent-color-second);
     color: var(--text-color);
 
-    padding: 10px 15px;
-    border-radius: 5px;
+    font-family: var(--heading-font);
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+    transition: background-color ease 0.3ms;
+}
+
+.close-dialog:hover {
+    background-color: var(--color-background);
+    color: var(--text-color);
 }

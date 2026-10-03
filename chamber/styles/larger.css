@@ -1,7 +1,6 @@
 @media only screen and (min-width: 825px) {
 :root {
     --primary-color: #2E56A6; /* Recife Blue */
-    --secondary-color: #03A63C; /* Pernambuco Green */
     --color-background: #F2F2F2; /* Off-white */
     --text-color: #182d57; /* Deep Ultramarine Blue */
     --accent-color: #BF4141;/* Coral */
@@ -247,10 +246,11 @@ h1 {
 /* ===== Aside ===== */
 
 .join-aside {
-    /* display: grid;
-    grid-template-columns: 1.5fr 1fr 1fr;
-    gap: 20px; */
-    padding: 0 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 0 80px;
+    align-items: start;
 }
 
 }
