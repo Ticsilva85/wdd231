@@ -4,6 +4,7 @@
     --text-color: #182d57; /* Deep Ultramarine Blue */
     --accent-color: #BF4141;/* Coral */
     --accent-color-second: #F2A20C; /* Golden */
+    --card-background-color: #e2e5ec; /* Alabaster Grey */
 
     --heading-font: "Fira Sans", sans-serif;
     --body-font: "PT Serif", serif;
@@ -389,7 +390,7 @@ footer {
 
 .event-card {
     padding: 20px;
-    background-color: white;
+    background-color: var(--card-background-color);
     border-radius: 10px;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
 }
@@ -436,7 +437,7 @@ footer {
 
 .weather-current,
 .weather-details {
-    background-color: white;
+    background-color: var(--card-background-color);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
@@ -491,7 +492,7 @@ footer {
 }
 
 .forecast-card {
-    background-color: white;
+    background-color: var(--card-background-color);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
@@ -543,7 +544,7 @@ footer {
     gap: 20px;
     align-items: center;
     padding: 20px;
-    background-color:white;
+    background-color:var(--card-background-color);
     border-radius: 10px;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
 }
@@ -613,7 +614,7 @@ footer {
     font-size: 1.2rem;
 }
 
-label {
+.join-form label {
     display: flex;
     flex-direction: column;
     gap: 5px;
@@ -625,7 +626,11 @@ label {
 .join-form textarea {
     width: 100%;
     max-width: 100%;
+    padding: 10px;
     box-sizing: border-box;
+
+    font-family: var(--body-font);
+    font-size: 1rem;
 }
 
 .join-form input,
@@ -635,6 +640,7 @@ label {
 
 .join-form textarea {
     height: 100px;
+    resize: vertical;
 }
 
 .join-button {
@@ -794,4 +800,51 @@ dialog::backdrop {
 .close-dialog:hover {
     background-color: var(--color-background);
     color: var(--text-color);
+}
+
+/* ===== THANK YOU PAGE ===== */
+
+
+.thank-you-picture {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.thank-you-picture picture {
+    display: block;
+    width: 100%;
+    max-width: 600px;
+}
+
+.thank-you-picture img {
+    display: block;
+    width: 100%;
+    height: auto;
+
+    border-radius: 15px;
+    box-shadow: 5px 5px 15px rgb(0 0 0 / 30%);
+}
+
+.back-home {
+    display: block;
+    width: fit-content;
+    margin: 20px auto;
+
+    padding: 10px 15px;
+    background-color: var(--accent-color-second);
+    color: var(--text-color);
+    font-family: var(--heading-font);
+    font-weight: bolder;
+
+    text-decoration: none;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgb(0 0 0 / 30%);
+
+    transition: backgroud-color ease 0.3s;
+}
+
+.back-home:hover {
+    background-color: var(--accent-color);
+    color: var(--color-background);
 }
