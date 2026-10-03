@@ -8,7 +8,7 @@ navbutton.addEventListener('click', () => {
     navmenu.classList.toggle('show');
 
     const isOpen = navbutton.classList.contains('show');
-    navbutton.setAttribute('Aria-expanded', isOpen);
+    navbutton.setAttribute('aria-expanded', isOpen);
 })
 
 // ===== LOAD MEMBER DATA ===== //
@@ -372,9 +372,11 @@ if (spotlightsContainer) {
 
 // ===== JOIN PAGE ===== //
 // ===== Time stamp information ===== //
-const timestamp = document.querySelector("#timestamp");
+const timestampField = document.querySelector("#timestamp");
 
-timestamp.value = new Date().toISOString();
+if (timestampField) {
+    timestampField.value = new Date().toISOString();
+}
 
 // ===== Dialog cards ===== //
 const membershipDialogs = [
@@ -398,40 +400,53 @@ const membershipDialogs = [
 
 membershipDialogs.forEach(({ link, dialog }) => {
 
-    link.addEventListener("click", (event) => {
-        event.preventDefault();
-        dialog.showModal();
-    });
+    if (link && dialog) {
 
-    const closeButton = dialog.querySelector(".close-dialog");
+        link.addEventListener("click", (event) => {
+            event.preventDefault();
+            dialog.showModal();
+        });
 
-    closeButton.addEventListener("click", () => {
-        dialog.close();
-    });
+        const closeButton = dialog.querySelector(".close-dialog");
 
+        if (closeButton) {
+            closeButton.addEventListener("click", () => {
+                dialog.close();
+            });
+        }
+    }
 });
 
+
 // ===== THANK YOU PAGE ===== //
-const params = new URLSearchParams(window.location.search);
+const resultFirstName = document.querySelector("#result-firstname");
 
-document.querySelector("#result-firstname").textContent =
-    params.get("firstName");
+if (resultFirstName) {
 
-document.querySelector("#result-lastname").textContent =
-    params.get("lastName");
+    const params = new URLSearchParams(window.location.search);
 
-document.querySelector("#result-email").textContent =
-    params.get("email");
+    resultFirstName.textContent =
+        params.get("firstName");
 
-document.querySelector("#result-phone").textContent =
-    params.get("phone");
+    document.querySelector("#result-lastname").textContent =
+        params.get("lastName");
 
-document.querySelector("#result-business").textContent =
-    params.get("business-name");
+    document.querySelector("#result-email").textContent =
+        params.get("email");
 
-if (timestamp) {
-    const date = new Date(timestamp);
+    document.querySelector("#result-phone").textContent =
+        params.get("phone");
 
-    document.querySelector("#result-date").textContent =
-        date.toLocaleString();
+    document.querySelector("#result-business").textContent =
+        params.get("business-name");
+
+    const submittedTimestamp = params.get("timestamp");
+
+    if (submittedTimestamp) {
+
+        const date = new Date(submittedTimestamp);
+
+        document.querySelector("#result-date").textContent =
+            date.toLocaleString();
+    }
 }
