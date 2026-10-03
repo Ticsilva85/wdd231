@@ -647,7 +647,7 @@ label {
     font-size: 1.6rem;
     font-weight: bolder;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
-    transition: background-color ease 0.3ms;
+    transition: background-color ease 0.3s;
 }
 
 .join-button:hover {
@@ -788,7 +788,7 @@ dialog::backdrop {
     cursor: pointer;
 
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
-    transition: background-color ease 0.3ms;
+    transition: background-color ease 0.3s;
 }
 
 .close-dialog:hover {
