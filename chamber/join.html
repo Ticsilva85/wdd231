@@ -51,52 +51,130 @@
     </header>
 
     <main>
-        <h1>Join</h1>
-        
-        <section class="aside">
+        <section class="join-intro">
+            <h1>Join our Business Community</h1>
 
-            <h2>Join Our Business Community</h2>
+            <p>Join the Recife Chamber of Commerce and connect with local businesses, discover new opportunities, increase your visibility, build valuable partnerships, and access resources designed to support your organization’s continued growth.</p>
+        </section>
 
-            <p>Register your business and connect with customers, partners, and opportunities in our growing community.</p>
+        <section class="join-aside">
+            <form class="join-form" action="thankyou.html" method="get">
+                <label for="firstName">
+                    First Name:
+                    <input type="text" id="firstName" name="firstName"  title="Enter your first name" autocomplete="given-name" required>
+                </label>
 
-            <form action="thankyou.html" method="get">
-                <label for="firstName">First Name:</label>
-                <input type="text" id="firstName" name="firstName"  title="Enter your first name" autocomplete="given-name" required>
+                <label for="lastName">
+                    Last Name:
+                    <input type="text" id="lastName" name="lastName" title="Enter your last name" autocomplete="family-name" required>
+                </label>
 
-                <label for="lastName">Last Name:</label>
-                <input type="text" id="lastName" name="lastName" title="Enter your last name" autocomplete="family-name" required>
+                <label for="organization-title">
+                    Organization Title:
+                    <input type="text" id="organization-title" name="organization-title" title="Enter your organizational title using at least 7 letters, hyphens, or spaces" autocomplete="organization-title" pattern="[A-Za-z\s-]{7,}">
+                </label>
 
-                <label for="organization-title">Organization Title:</label>
-                <input type="text" id="organization-title" name="organization-title" title="Enter your organizational title using at least 7 letters, hyphens, or spaces" autocomplete="organization-title" pattern="[A-Za-zÀ-ÿ -]{7,}">
+                <label for="email">
+                    Email Address:
+                    <input type="email" id="email" name="email" title="Enter your e-mail" placeholder="yourname@yourcompany.com" autocomplete="email" required>
+                </label>
 
-                <label for="email">Email Address:</label>
-                <input type="email" id="email" name="email" title="Enter your e-mail" placeholder="yourname@yourcompany.com" autocomplete="email" required>
+                <label for="phone">
+                    Telephone:
+                    <input type="tel" id="phone" name="phone" title="Enter your telephone" autocomplete="tel" required>
+                </label>
 
-                <label for="phone">Telephone:</label>
-                <input type="tel" id="phone" name="phone" title="Enter your telephone" autocomplete="tel" required>
+                <label for="business-name">
+                    Business Name:
+                    <input type="text" id="business-name" name="business-name" title="business-name" autocomplete="organization" required>
+                </label>
 
-                <label for="business-name">Business Name:</label>
-                <input type="text" id="business-name" name="business-name" title="business-name" autocomplete="organization" required>
+                <label for="membership">
+                    Membership Level:
+                    <select id="membership" name="membership" required>
+                        <option value="" disabled selected>Select a membership level</option>
+                        <option value="np">NP Membership</option>
+                        <option value="bronze">Bronze Membership</option>
+                        <option value="silver">Silver Membership</option>
+                        <option value="gold">Gold Membership</option>
+                    </select>
+                </label>
 
-                <label for="membership">Membership Level:</label>
-
-                <select id="membership" name="membership" required>
-                    <option value="" disabled selected>Select a membership level</option>
-                    <option value="np">NP Membership</option>
-                    <option value="bronze">Bronze Membership</option>
-                    <option value="silver">Silver Membership</option>
-                    <option value="gold">Gold Membership</option>
-                </select>
-
-                <label for="description">Business Description:</label>
+                <label for="description" class="business-description">Business Description:</label>
                 <textarea name="description" id="description" title="Enter a description of your business"></textarea>
 
-                <label for="timestamp"></label>
                 <input type="hidden" name="timestamp" id="timestamp">
 
-
-                <button type="submit">Confirm application</button>
+                <button type="submit" class="join-button">Confirm application</button>
             </form>
+
+            <section class="cards">
+                <h2>Membership Levels</h2>
+
+                <div class="card1">
+                    <h3>Non Profit Membership</h3>
+
+                    <a href="#" id="open-np">Learn More</a>
+                </div>
+                <div class="card2">
+                    <h3>Bronze Membership</h3>
+                    <a href="#" id="open-bronze">Learn More</a>
+                </div>
+                <div class="card3">
+                    <h3>Silver Membership</h3>
+                    <a href="#" id="open-silver">Learn More</a>
+                </div>
+                <div class="card4">
+                    <h3>Gold Membership</h3>
+                    <a href="#" id="open-gold">Learn More</a>
+                </div>
+            </section>
+
+            <dialog id="np-dialog">
+                <h2>NP Membership</h2>
+                <p>Designed for non-profit organizations.</p>
+
+                <h3>Benefits</h3>
+                <ul>
+                    <li>No membership fee</li>
+                    <li>Access to community events</li>
+                    <li>Networking opportunities</li>
+                    <li>Business directory listing</li>
+                </ul>
+
+                <button class="close-dialog">Close</button>
+            </dialog>
+
+            <dialog id="silver-dialog">
+                <h2>Silver Membership</h2>
+                <p>Additional benefits for businesses looking for greater visibility.</p>
+
+                <h3>Benefits</h3>
+                <ul>
+                    <li>All Bronze Membership benefits</li>
+                    <li>Special training events</li>
+                    <li>Greater event discounts</li>
+                    <li>Advertising opportunities</li>
+                </ul>
+
+                <button class="close-dialog">Close</button>
+            </dialog>
+
+            <dialog id="gold-dialog">
+                <h2>Gold Membership</h2>
+                <p>Our premium membership level.</p>
+
+                <h3>Benefits</h3>
+                <ul>
+                    <li>All Silver Membership benefits</li>
+                    <li>Premium event discounts</li>
+                    <li>Priority advertising opportunities</li>
+                    <li>Spotlight positions on the home page</li>
+                    <li>Exclusive business events</li>
+                </ul>
+
+                <button class="close-dialog">Close</button>
+            </dialog>
         </section>
 
     </main>

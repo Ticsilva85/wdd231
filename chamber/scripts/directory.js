@@ -375,3 +375,38 @@ if (spotlightsContainer) {
 const timestamp = document.querySelector("#timestamp");
 
 timestamp.value = new Date().toISOString();
+
+// ===== Dialog cards ===== //
+const membershipDialogs = [
+    {
+        link: document.querySelector("#open-np"),
+        dialog: document.querySelector("#np-dialog")
+    },
+    {
+        link: document.querySelector("#open-bronze"),
+        dialog: document.querySelector("#bronze-dialog")
+    },
+    {
+        link: document.querySelector("#open-silver"),
+        dialog: document.querySelector("#silver-dialog")
+    },
+    {
+        link: document.querySelector("#open-gold"),
+        dialog: document.querySelector("#gold-dialog")
+    }
+];
+
+membershipDialogs.forEach(({ link, dialog }) => {
+
+    link.addEventListener("click", (event) => {
+        event.preventDefault();
+        dialog.showModal();
+    });
+
+    const closeButton = dialog.querySelector(".close-dialog");
+
+    closeButton.addEventListener("click", () => {
+        dialog.close();
+    });
+
+});
