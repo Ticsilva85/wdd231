@@ -645,14 +645,20 @@ footer {
 
 .join-button {
     border: none;
+
     background-color: var(--accent-color-second);
+    color: var(--text-color);
+
     padding: 20px;
     margin: 20px 0;
     border-radius: 15px;
+
     font-family: var(--heading-font);
     font-size: 1.6rem;
     font-weight: bolder;
+
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+    
     transition: background-color ease 0.3s;
 }
 
