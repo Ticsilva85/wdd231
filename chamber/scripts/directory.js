@@ -410,3 +410,28 @@ membershipDialogs.forEach(({ link, dialog }) => {
     });
 
 });
+
+// ===== THANK YOU PAGE ===== //
+const params = new URLSearchParams(window.location.search);
+
+document.querySelector("#result-firstname").textContent =
+    params.get("firstName");
+
+document.querySelector("#result-lastname").textContent =
+    params.get("lastName");
+
+document.querySelector("#result-email").textContent =
+    params.get("email");
+
+document.querySelector("#result-phone").textContent =
+    params.get("phone");
+
+document.querySelector("#result-business").textContent =
+    params.get("business-name");
+
+if (timestamp) {
+    const date = new Date(timestamp);
+
+    document.querySelector("#result-date").textContent =
+        date.toLocaleString();
+}
