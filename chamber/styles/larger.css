@@ -253,4 +253,16 @@ h1 {
     align-items: start;
 }
 
+/* ===== THANK YOU PAGE ===== */
+.join-information {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 0.8fr 1fr;
+    gap: 20px;
+}
+
+.application-details {
+    padding: 20px;
+}
+
 }

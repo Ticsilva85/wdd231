@@ -431,19 +431,27 @@ if (resultFirstName) {
     document.querySelector("#result-lastname").textContent =
         params.get("lastName");
 
-    document.querySelector("#result-email").textContent =
+    document.querySelector("#result-organizationtitle").textContent =
+        params.get("organization-title");
+
+    document.querySelector("#result-emailaddress").textContent =
         params.get("email");
 
-    document.querySelector("#result-phone").textContent =
+    document.querySelector("#result-telephone").textContent =
         params.get("phone");
 
-    document.querySelector("#result-business").textContent =
+    document.querySelector("#result-businessname").textContent =
         params.get("business-name");
+
+    document.querySelector("#result-membershiplevel").textContent =
+        params.get("membership");
+
+    document.querySelector("#result-businessdescription").textContent =
+        params.get("description");
 
     const submittedTimestamp = params.get("timestamp");
 
     if (submittedTimestamp) {
-
         const date = new Date(submittedTimestamp);
 
         document.querySelector("#result-date").textContent =
