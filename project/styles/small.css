@@ -19,20 +19,24 @@ body {
     color: var(--body-font-color);
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 /* ===== HEADER ===== */
 
 #header-top {
     background-color: var(--header-color);
     color: white;
-    padding: 20px 10px;
+    padding: 20px;
 }
 
 header h1{
-    font-size: 2rem;
+    font-size: 2.5rem;
 }
 
 header p {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
 }
 
 /* ===== MAIN ===== */
@@ -184,4 +188,15 @@ main ol li {
 .typography-btn:hover {
     background-color: var(--header-color);
     color: white;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    padding: 20px;
+    background-color: var(--header-color);
+    color: white;
+}
+
+footer span {
+    font-size: 1.5rem;
 }
