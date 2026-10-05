@@ -135,7 +135,7 @@ main ol li {
     padding: 20px;
 }
 
-/* Estilos compartilhados pelos quatro cards */
+/* Shared style by the color cards */
 .color-scheme1,
 .color-scheme2,
 .color-scheme3,
@@ -166,4 +166,22 @@ main ol li {
 .color-scheme4 {
     background-color: var(--background-color);
     color: var(--body-font-color);
+}
+
+.typography-btn {
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--accent-color);
+    color: var(--body-font-color);
+    font-weight: 700;
+    font-size: 1.2rem;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+    transition: background-color ease 0.3s;
+    cursor: pointer;
+}
+
+.typography-btn:hover {
+    background-color: var(--header-color);
+    color: white;
 }
