@@ -1,0 +1,31 @@
+@media only screen and (min-width: 769px) {
+:root {
+    --background-color: #F2E4DF; /* Seashell */
+    --header-color:#a5223f; /* Rosewood */
+    --body-font-color: #2F2F2F; /* Graphite */
+    --accent-color: #f0df88; /* Goden Sand */
+
+    --body-font: "Rubik", sans-serif;
+}
+
+
+nav ul {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem 1rem;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto 30px;
+}
+
+.color-cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+}

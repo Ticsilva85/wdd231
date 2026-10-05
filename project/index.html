@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 231 - Final Project - English Activity Hub</title>
+
+    <meta name="description" content="Final Project presentation to the WDD 231 - Web Frontend Development course at BYU - Pathway Worldwide">
+    <meta name="author" content="Tiago Cavalcante da Silva">
+
+    <link rel="stylesheet" href="./styles/small.css">
+    <link rel="stylesheet" href="./styles/larger.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header id="header-top">
+        <p>WDD 231 · Website Project Site Plan</p>
+        <h1>English Activity Hub</h1>
+        <p>Practical activities. Less preparation. More learning.</p>
+        <p>Tiago Cavalcante da Silva</p>
+    </header>
+
+    <nav aria-label="Site plan Sections">
+        <ul>
+            <li><a href="#site-name">Site Name</a></li>
+            <li><a href="#purpose">Purpose</a></li>
+            <li><a href="#scenarios">Scenarios</a></li>
+            <li><a href="#color-scheme">Colors</a></li>
+            <li><a href="#typography">Typography</a></li>
+            <li><a href="#wireframes">Wireframes</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="site-name">
+            <div class="section-heading">
+                <h2>1. Site Name</h2>
+                <a href="#header-top">Back to top ↑</a>
+            </div>
+        
+            <h3>English Activity Hub</h3>
+            <p>
+                This name identifies a central place where English teachers can find classroom activities. “English” describes the subject, “Activity” identifies the main resource, and “Hub” communicates that the resources are organized in one convenient location.
+
+                The site name will appear as a text wordmark in the header. A purchased domain is not planned for this course project.
+            </p>
+        </section>
+
+        <section id="purpose">
+            <div class="section-heading">
+                <h2>2. Purpose</h2>
+                <a href="#header-top">Back to top ↑</a>
+            </div>
+        
+            <p>
+                English Activity Hub will help teachers find practical, low-preparation classroom activities for beginner English learners. It will provide original activities with learning objectives, topics, levels, estimated durations, skills, materials, and step-by-step instructions.
+
+                Teachers will be able to search and filter the catalog, read activity details, save favorites in their browser, and use a dictionary tool to look up English vocabulary.
+            </p>
+
+            <h3>Target Audience</h3>
+            <p>
+                English teachers working with beginner learners, especially teachers who need short, adaptable activities and have limited lesson-planning time. The interface and activity instructions will be written in English.
+            </p>
+
+            <h3>Planned Pages</h3>
+            <ul>
+                <li><strong>Home — index.html:</strong> introduction, a Browse Activities link, topic categories, featured activities, and a short explanation of how the site works.</li>
+
+                <li><strong>Activities — activities.html:</strong> searchable catalog with topic, level, and duration filters; activity details; and controls for saving favorites.</li>
+
+                <li><strong>Teacher Toolkit — toolkit.html:</strong> saved activities and a dictionary search tool.</li>
+            </ul>
+
+            <h3>Content and dynamic features</h3>
+            <p>
+                The initial content target is 12 original activities across Food, Daily Routines, Animals, and Family. Activities will be labeled Pre-A1 or A1 within the beginner range. This quantity is a planning decision and may be adjusted to the final assignment rubric.
+            </p>
+
+            <ul>
+                <li>A local JSON file will store activity data, loaded with fetch and async/await.</li>
+                <li>JavaScript will display cards, combine filters, and show a clear message when no activity matches.</li>
+                <li>localStorage will store favorite activity IDs on the same browser and device without requiring an account.</li>
+                <li>A remote dictionary API is planned for vocabulary lookups, with loading, missing-word, and connection-error messages.</li>
+            </ul>
+
+        </section>
+
+        <section id="scenarios">
+            <div class="section-heading">
+                <h2>3. Scenarios</h2>
+                <a href="#header-top">Back to top ↑</a>
+            </div>
+        
+            <ol>
+                <li>Which beginner speaking activity about food can I use in a ten-minute classroom session?</li>
+                <li>What materials and instructions do I need to teach daily routines with little preparation?</li>
+                <li>How can I save an activity and find it again when I plan my next lesson?</li>
+                <li>Where can I look up the meaning of an English word before using it in class?</li>
+            </ol>
+            <p>
+                The catalog filters address the first question, the activity details answer the second, and the Teacher Toolkit supports the last two.
+            </p>
+        </section>
+
+        <section id="color-scheme">
+            <div class="section-heading">
+                <h2>Color Scheme</h2>
+                <a href="#header-top">Back to top ↑</a>
+            </div>
+
+            <p>
+                The following palette is applied throughout this site plan and will be used on the website.
+            </p>
+
+            <div class="color-cards">
+                <div class="color-scheme1">
+                    <h3>Rosewood</h3>
+                    <p>#BA324F</p>
+                    <p>Header and footer backgrounds.</p>
+                </div>
+
+                <div class="color-scheme2">
+                    <h3>Graphite</h3>
+                    <p>#2F2F2F</p>
+                    <p>Body text, and structural borders on light surfaces.</p>
+                </div>
+
+                <div class="color-scheme3">
+                    <h3>Goden Sand</h3>
+                    <p>#D5C67A</p>
+                    <p>Accent color for links and highlights</p>
+                </div>
+                
+                <div class="color-scheme4">
+                    <h3>Seashell</h3>
+                    <p>#F2E4DF</p>
+                    <p>Cards and section surfaces; text on deep blue and teal backgrounds.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="typography">
+            <div class="section-heading">
+                <h2>5. Typography</h2>
+                <a href="#header-top">Back to top ↑</a>
+            </div>
+        
+            <p>
+                <strong>Selected font: Rubik.</strong> Rubik is a sans-serif font with slightly rounded corners that gives English Activity Hub a friendly, modern appearance. It will be used throughout the website to create a consistent visual identity.
+            </p>
+
+            <ul>
+                <li><strong>Headings:</strong> Rubik Bold (700) to clearly identify pages and sections.</li>
+                <li><strong>Body text:</strong> Rubik Regular (400) for descriptions and activity instructions.</li>
+                <li><strong>Navigation and buttons:</strong> Rubik Medium (500) to emphasize links and actions.</li>
+            </ul>
+
+            <h2>Heading sample: Find your next classroom activity</h2>
+
+            <p>Body sample: Explore practical activities for beginner English learners. Choose a topic, check the duration, and read the instructions before class.</p>
+
+            <button class="typography-btn">Button label sample: Browse Activities</button>
+        </section>
+
+        <section id="wireframes">
+            <div class="section-heading">
+                <h2>6. Wireframes</h2>
+                <a href="#header-top">Back to top ↑</a>
+            </div>
+        
+            <h3>English Activity Hub</h3>
+            <p>
+                The home page will have two student-created black-and-white sketches: one for a small mobile viewport and one for a large desktop or tablet viewport.
+            </p>
+
+            <img src="./images/desktop-view.jpg" alt="Desktop View of the English Activities Hub page">
+            <img src="./images/mobile-view.jpg" alt="Mobile View of the English Activities Hub page">
+        </section>
+
+
+
+
+
+    </main>
+
+    <footer>
+
+    </footer>
+</body>
+</html>
