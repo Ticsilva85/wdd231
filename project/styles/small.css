@@ -190,6 +190,14 @@ main ol li {
     color: white;
 }
 
+/* ===== WIREFRAMES ===== */
+#wireframes > img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+}
+
 /* ===== FOOTER ===== */
 footer {
     padding: 20px;
