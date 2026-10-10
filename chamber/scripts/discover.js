@@ -18,6 +18,9 @@ function displayPlaces(places) {
         const title = document.createElement("h3");
         title.textContent = place.name;
 
+        // Create the figure
+        const figure = document.createElement("figure");
+
         // Create the image
         const image = document.createElement("img");
         image.src = place.image;
@@ -26,8 +29,15 @@ function displayPlaces(places) {
         image.width = 300;
         image.height = 200;
 
+        // Add image to figure
+        figure.appendChild(image);
+
+        // Create information container
+        const cardInfo = document.createElement("div");
+        cardInfo.classList.add("card-info");
+
         // Create the address
-        const address = document.createElement("p");
+        const address = document.createElement("address");
         address.classList.add("place-address");
         address.textContent = place.address;
 
@@ -36,20 +46,23 @@ function displayPlaces(places) {
         description.classList.add("place-description");
         description.textContent = place.description;
 
-        // Create the Learn More button
+        // Create Learn More button
         const button = document.createElement("button");
         button.textContent = "Learn More";
         button.classList.add("learn-more-btn");
         button.type = "button";
 
-        // Add elements to the card
-        card.appendChild(title);
-        card.appendChild(image);
-        card.appendChild(address);
-        card.appendChild(description);
-        card.appendChild(button);
+        // Add information elements
+        cardInfo.appendChild(address);
+        cardInfo.appendChild(description);
+        cardInfo.appendChild(button);
 
-        // Add card to the container
+        // Build the card
+        card.appendChild(title);
+        card.appendChild(figure);
+        card.appendChild(cardInfo);
+
+        // Add card to container
         container.appendChild(card);
     });
 }
