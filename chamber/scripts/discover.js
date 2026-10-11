@@ -21,7 +21,7 @@ function displayPlaces(places) {
 
     container.querySelectorAll(".discover-card").forEach(card => card.remove());
 
-    places.forEach((place) => {
+    places.forEach((place, index) => {
 
         // Create the card
         const card = document.createElement("article");
@@ -38,7 +38,12 @@ function displayPlaces(places) {
         const image = document.createElement("img");
         image.src = place.image;
         image.alt = `View of ${place.name}`;
-        image.loading = "lazy";
+        image.loading = index === 0 ? "eager" : "lazy";
+
+        if (index === 0) {
+            image.fetchPriority = "high";
+        }
+        
         image.width = 300;
         image.height = 200;
 
@@ -78,8 +83,9 @@ function displayPlaces(places) {
         // Add card to container
         container.appendChild(card);
 
-        container.classList.add("loaded");
     });
+    
+    container.classList.add("loaded");
 
     // VISITOR MESSAGE USING LOCAL STORAGE
 
