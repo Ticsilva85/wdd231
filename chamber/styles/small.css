@@ -914,38 +914,53 @@ dialog::backdrop {
 /* ===== DISCOVER PAGE ===== */
 .discover-main > p {
     font-size: 1.5rem;
-    padding: 20px 20px 40px 20px;
+    padding: 40px;
     text-align: center;
 }
 
+.discover-main h2 {
+    font-family: var(--heading-font);
+    text-align: center;
+    font-size: 1.5rem;
+    padding:  20px 60px;
+}
+
 .discover-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 20px; 
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 20px;
     padding: 20px;
-    align-items: center;
+    align-items: stretch;
 }
 
 .discover-grid h2 {
     font-family: var(--heading-font);
-    font-size: 1.5em;
+    font-size: 1.8em;
 }
 
 .discover-card {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas:
+        "title"
+        "image"
+        "info";
+    grid-template-rows: auto auto minmax(0, 1fr);
+
+    width: 100%;
+    min-width: 0;
+    min-height: 400px;
+    height: auto;
+    box-sizing: border-box;
+
     gap: 20px;
-    grid-template-areas: 
-    "title"
-    "image"
-    "info"
-    ;
     padding: 20px;
 
     border: 1px solid var(--card-background-color);
     border-radius: 15px;
     overflow: hidden;
-    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
 .discover-card h3 {
@@ -958,10 +973,19 @@ dialog::backdrop {
     margin: -20px -20px 20px;
 }
 
-.discover-card img {
+.discover-card figure {
     grid-area: image;
+    margin: 0;
     width: 100%;
-    height: 200px;
+    min-width: 0;
+    aspect-ratio: 3 / 2;
+    overflow: hidden;
+}
+
+.discover-card figure img {
+    display: block;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     border-radius: 8px;
 }
@@ -971,6 +995,8 @@ dialog::backdrop {
     display: flex;
     flex-direction: column;
     gap: 15px;
+    padding: 20px;
+    min-height: 0;
 }
 
 .card-info .place-address {
@@ -991,6 +1017,11 @@ dialog::backdrop {
     width: fit-content;
     align-self: center;
 
+    margin-top: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+
     font-weight: bolder;
     font-size:1.2rem;
     font-family: var(--heading-font);
@@ -1003,4 +1034,19 @@ dialog::backdrop {
 .discover-card .learn-more-btn:hover {
     background-color:var(--accent-color);
     color: var(--color-background)
+}
+
+.visitor-message {
+    min-height: 110px;
+    padding: 20px;
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--primary-color);
+    font-size: clamp(1.2rem, 4vw, 2rem);
+    text-align: center;
+    line-height: 1.4;
 }

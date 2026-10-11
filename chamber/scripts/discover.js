@@ -1,3 +1,16 @@
+// ===== HAMBURGER BUTTON ===== //
+
+const navbutton = document.querySelector('#menu');
+const navmenu = document.querySelector('.nav-menu');
+
+navbutton.addEventListener('click', () => {
+    navbutton.classList.toggle('show');
+    navmenu.classList.toggle('show');
+
+    const isOpen = navbutton.classList.contains('show');
+    navbutton.setAttribute('aria-expanded', isOpen);
+})
+
 // DISCOVER.HTML //
 import { places } from "../data/places.mjs";
 
@@ -6,7 +19,7 @@ displayPlaces(places);
 function displayPlaces(places) {
     const container = document.querySelector("#discover-grid");
 
-    container.innerHTML = "<h2>Places of Interest</h2>";
+    container.querySelectorAll(".discover-card").forEach(card => card.remove());
 
     places.forEach((place) => {
 
@@ -65,4 +78,53 @@ function displayPlaces(places) {
         // Add card to container
         container.appendChild(card);
     });
+
+
+
+    // VISITOR MESSAGE USING LOCAL STORAGE
+
+    function displayVisitorMessage() {
+
+        const visitorMessage = document.querySelector("#visitor-message");
+
+        // Get the current date in milliseconds
+        const currentVisit = Date.now();
+
+        // Get the previous visit from localStorage
+        const lastVisit = localStorage.getItem("lastVisit");
+
+        let message;
+
+        if (lastVisit === null) {
+            // First visit
+            message = "Welcome! Let us know if you have any questions.";
+
+        } else {
+            // Calculate the difference between visits
+            const timeDifference = currentVisit - Number(lastVisit);
+
+            // Convert milliseconds into days
+            const daysDifference = Math.floor(
+                timeDifference / (1000 * 60 * 60 * 24)
+            );
+
+            if (daysDifference < 1) {
+                message = "Back so soon! Awesome!";
+
+            } else if (daysDifference === 1) {
+                message = "You last visited 1 day ago.";
+
+            } else {
+                message = `You last visited ${daysDifference} days ago.`;
+            }
+        }
+
+        // Display the message
+        visitorMessage.textContent = message;
+
+        // Save the current visit
+        localStorage.setItem("lastVisit", currentVisit.toString());
+    }
+
+displayVisitorMessage();
 }
