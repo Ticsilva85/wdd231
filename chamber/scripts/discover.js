@@ -28,7 +28,7 @@ function displayPlaces(places) {
         card.classList.add("discover-card");
 
         // Create the title
-        const title = document.createElement("h3");
+        const title = document.createElement("h2");
         title.textContent = place.name;
 
         // Create the figure
@@ -77,9 +77,9 @@ function displayPlaces(places) {
 
         // Add card to container
         container.appendChild(card);
+
+        container.classList.add("loaded");
     });
-
-
 
     // VISITOR MESSAGE USING LOCAL STORAGE
 
@@ -128,3 +128,13 @@ function displayPlaces(places) {
 
 displayVisitorMessage();
 }
+
+// ===== CURRENT YEAR ===== //
+const currentYear = new Date().getFullYear();
+
+document.querySelector('#currentyear').textContent = currentYear;
+
+// ===== LAST MODIFIED DATE ===== //
+const lastModified = document.lastModified;
+
+document.querySelector('#lastModified').textContent = `Last Modification: ${lastModified}`;
