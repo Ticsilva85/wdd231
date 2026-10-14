@@ -6,3 +6,42 @@
 
     --body-font: "Rubik", sans-serif;
 }
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: var(--body-font);
+    color: var(--body-font-color);
+}
+
+header {
+    display: grid;
+    grid-template-columns: auto auto 0.5fr 0.5fr;
+    gap: 10px;
+    background-color: var(--header-color);
+    width: 100%;
+    padding: 10px;
+    align-items: center;
+}
+
+header > img {
+    width: 50px;
+    height: 50px;
+}
+
+.site-logo {
+    text-decoration:none;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.header-nav {
+    display:none;
+}
+
+#menu-button {
+    font-size: 1.5rem;
+}
