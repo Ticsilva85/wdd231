@@ -3,6 +3,11 @@
     /* ===== HEADER ===== */
     header {
         grid-template-columns: auto 1fr auto;
+        margin-bottom: 40px;
+    }
+
+    .site-logo {
+        font-size: 1.7rem;
     }
 
     /* ===== HAMBURGER ===== */
@@ -41,5 +46,48 @@
         text-decoration-color: var(--accent-color);
         text-decoration-thickness: 2px;
         text-underline-offset: 10px;
+    }
+
+    /* ================== ACTIVITIES.HTML ================== */
+    /* ===== MAIN ===== */
+    main {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    }
+
+    main h1 {
+        font-size: 1.7rem;
+    }
+
+    .activities-intro h2 {
+    font-size: 1.5rem;
+}
+
+    /* ===== Activities Filters ===== */
+
+    .filters-container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    align-items: end;
+    }
+
+    .activities-filters {
+    margin-inline: 0;
+    border-radius: 10px;
+    }
+
+    #clear-filters {
+        width: auto;
+        justify-self: start;
+    }
+
+    /* ===== Activities Grid ===== */
+
+    .activities-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 25px;
     }
 }
