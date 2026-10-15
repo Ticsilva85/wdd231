@@ -14,10 +14,7 @@
 
     <!-- SCRIPTS -->
     <script src="./script/main.js" defer></script>
-    <script src="./script/form.js"></script>
-    <script src="./script/suggest.js"></script>
-    <script src="./script/favorites.js"></script>
-    <script src="./script/thankyou.js"></script>
+    <script src="script/activities.js" type="module"></script>
 
     <!-- FAVICON -->
     <link rel="icon" href="./images/final-project-favicon.ico">
@@ -117,6 +114,10 @@
                     </select>
                 </div>
 
+                <button type="button" id="search-activities">
+                    Search Activities
+                </button>
+
                 <button type="button" id="clear-filter">
                     Clear Filters
                 </button>
@@ -124,15 +125,19 @@
         </section>
 
         <section class="activities-catalog" aria-labelledby="catalog-title">
-            <h2>Available Activities</h2>
+            <h2 id="catalog-title">Available Activities</h2>
 
             <p id="results-count" role="status" aria-live="polite">
-                Loading Activities...
+                Use the filters above to find activities.
             </p>
 
             <div id="activities-container" class="activities-grid">
                 <!-- Activity cards will be generated using JavaScript -->
             </div>
+
+            <button type="button" id="load-more" hidden>
+                Load More
+            </button>
 
         </section>
 

@@ -1,0 +1,681 @@
+[
+  {
+    "id": 1,
+    "title": "Vocabulary Bingo",
+    "level": "Beginner",
+    "skill": "Vocabulary",
+    "duration": 20,
+    "description": "Review familiar English words through a bingo game.",
+    "materials": [
+      "Bingo cards",
+      "Pencils",
+      "Word list"
+    ],
+    "instructions": [
+      "Prepare bingo cards with target vocabulary.",
+      "Give each student one card.",
+      "Call out words in random order.",
+      "Students mark matching words.",
+      "Check the first completed row and celebrate the winner."
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Picture Description",
+    "level": "Beginner",
+    "skill": "Speaking",
+    "duration": 15,
+    "description": "Describe people, objects, and actions in pictures.",
+    "materials": [
+      "Pictures or projected images"
+    ],
+    "instructions": [
+      "Show a clear picture to the class.",
+      "Model a simple descriptive sentence.",
+      "Ask students to name objects, colors, and actions.",
+      "Have pairs describe different parts of the picture.",
+      "Invite volunteers to share their sentences."
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Word Association",
+    "level": "Beginner",
+    "skill": "Vocabulary",
+    "duration": 10,
+    "description": "Build connections between everyday English words.",
+    "materials": [
+      "Whiteboard",
+      "Markers"
+    ],
+    "instructions": [
+      "Write a familiar word in the center of the board.",
+      "Ask students for related English words.",
+      "Record answers around the original word.",
+      "Discuss how the words are connected.",
+      "Review new vocabulary aloud."
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Grammar Challenge",
+    "level": "Elementary",
+    "skill": "Grammar",
+    "duration": 20,
+    "description": "Review grammar structures in a team competition.",
+    "materials": [
+      "Grammar questions",
+      "Whiteboard"
+    ],
+    "instructions": [
+      "Divide the class into small teams.",
+      "Display or read one grammar question at a time.",
+      "Allow teams time to agree on an answer.",
+      "Award a point for each correct response.",
+      "Explain the rules behind the answers."
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Find Someone Who",
+    "level": "Elementary",
+    "skill": "Speaking",
+    "duration": 20,
+    "description": "Practice question forms while interviewing classmates.",
+    "materials": [
+      "Question worksheets",
+      "Pencils"
+    ],
+    "instructions": [
+      "Give students a worksheet of prompts.",
+      "Model one question and answer.",
+      "Students circulate and ask classmates questions.",
+      "They record the names of matching classmates.",
+      "Discuss interesting findings as a class."
+    ]
+  },
+  {
+    "id": 6,
+    "title": "Sentence Scramble",
+    "level": "Elementary",
+    "skill": "Grammar",
+    "duration": 15,
+    "description": "Practice English word order by rebuilding sentences.",
+    "materials": [
+      "Word cards or sentence strips"
+    ],
+    "instructions": [
+      "Prepare sets of words from complete sentences.",
+      "Give each pair one scrambled set.",
+      "Ask pairs to arrange the words correctly.",
+      "Have pairs read their sentences aloud.",
+      "Check the order and explain any mistakes."
+    ]
+  },
+  {
+    "id": 7,
+    "title": "Story Sequencing",
+    "level": "Elementary",
+    "skill": "Reading",
+    "duration": 25,
+    "description": "Order key events from a short story.",
+    "materials": [
+      "Short story",
+      "Event cards"
+    ],
+    "instructions": [
+      "Choose a short age-appropriate story.",
+      "Have students read it once for understanding.",
+      "Give groups shuffled event cards.",
+      "Ask groups to place events in order.",
+      "Review the sequence using evidence from the text."
+    ]
+  },
+  {
+    "id": 8,
+    "title": "Listening Detective",
+    "level": "Intermediate",
+    "skill": "Listening",
+    "duration": 20,
+    "description": "Identify important details in a short audio recording.",
+    "materials": [
+      "Short audio recording",
+      "Speakers",
+      "Question sheet"
+    ],
+    "instructions": [
+      "Introduce the topic and key vocabulary.",
+      "Play the audio once for the main idea.",
+      "Give students detail questions.",
+      "Play the audio again.",
+      "Compare answers and discuss supporting clues."
+    ]
+  },
+  {
+    "id": 9,
+    "title": "Role-Play Situations",
+    "level": "Intermediate",
+    "skill": "Speaking",
+    "duration": 30,
+    "description": "Practice useful conversational language in realistic situations.",
+    "materials": [
+      "Situation cards"
+    ],
+    "instructions": [
+      "Prepare everyday situations such as shopping or ordering food.",
+      "Assign a role to each partner.",
+      "Provide time to plan expressions.",
+      "Pairs perform short dialogues.",
+      "Give feedback on clarity and useful language."
+    ]
+  },
+  {
+    "id": 10,
+    "title": "Reading Detectives",
+    "level": "Intermediate",
+    "skill": "Reading",
+    "duration": 25,
+    "description": "Find textual evidence to support reading answers.",
+    "materials": [
+      "Reading passages",
+      "Comprehension questions"
+    ],
+    "instructions": [
+      "Distribute a suitable reading passage.",
+      "Ask students to identify its main idea.",
+      "Give factual and inference questions.",
+      "Have students underline evidence for each answer.",
+      "Discuss why the evidence supports the answer."
+    ]
+  },
+  {
+    "id": 11,
+    "title": "Creative Story Writing",
+    "level": "Intermediate",
+    "skill": "Writing",
+    "duration": 35,
+    "description": "Write an original short story from a prompt.",
+    "materials": [
+      "Writing prompts",
+      "Paper or notebooks"
+    ],
+    "instructions": [
+      "Present a prompt featuring a character or problem.",
+      "Ask students to brainstorm ideas.",
+      "Have them draft a beginning, middle, and ending.",
+      "Allow time for peer feedback and revision.",
+      "Invite volunteers to share their stories."
+    ]
+  },
+  {
+    "id": 12,
+    "title": "Classroom Debate",
+    "level": "Advanced",
+    "skill": "Speaking",
+    "duration": 40,
+    "description": "Defend opinions using reasons and examples.",
+    "materials": [
+      "Debate topic cards",
+      "Timer"
+    ],
+    "instructions": [
+      "Choose an appropriate debatable topic.",
+      "Assign students to opposing teams.",
+      "Give preparation time for arguments and evidence.",
+      "Run timed opening statements and responses.",
+      "Debrief respectful disagreement and useful expressions."
+    ]
+  },
+  {
+    "id": 13,
+    "title": "Flashcard Match",
+    "level": "Beginner",
+    "skill": "Vocabulary",
+    "duration": 15,
+    "description": "Match images with the correct English words.",
+    "materials": [
+      "Picture cards",
+      "Word cards"
+    ],
+    "instructions": [
+      "Prepare matching picture and word cards.",
+      "Mix the cards and distribute them to groups.",
+      "Ask groups to match each picture to its word.",
+      "Have students pronounce each match.",
+      "Review any difficult words together."
+    ]
+  },
+  {
+    "id": 14,
+    "title": "Odd One Out",
+    "level": "Beginner",
+    "skill": "Vocabulary",
+    "duration": 15,
+    "description": "Identify the word that does not belong in a category.",
+    "materials": [
+      "Word lists or slides"
+    ],
+    "instructions": [
+      "Show sets of four familiar words.",
+      "Ask students to select the odd word out.",
+      "Invite them to explain the category shared by the other words.",
+      "Compare different reasonable explanations.",
+      "Create one new set as a class."
+    ]
+  },
+  {
+    "id": 15,
+    "title": "Action Commands",
+    "level": "Beginner",
+    "skill": "Listening",
+    "duration": 15,
+    "description": "Follow spoken classroom commands in English.",
+    "materials": [
+      "Space to move safely"
+    ],
+    "instructions": [
+      "Teach a few simple commands such as stand up or point to the door.",
+      "Model each action while speaking.",
+      "Give commands without demonstrating.",
+      "Increase the sequence to two or three actions.",
+      "Let students take turns giving commands."
+    ]
+  },
+  {
+    "id": 16,
+    "title": "Sound and Picture Match",
+    "level": "Beginner",
+    "skill": "Listening",
+    "duration": 15,
+    "description": "Connect spoken words to corresponding pictures.",
+    "materials": [
+      "Picture worksheet",
+      "Teacher word list or audio"
+    ],
+    "instructions": [
+      "Provide a sheet of numbered pictures.",
+      "Say a target word clearly twice.",
+      "Ask students to point to or circle the correct picture.",
+      "Repeat with the remaining words.",
+      "Check answers and practice pronunciation."
+    ]
+  },
+  {
+    "id": 17,
+    "title": "My Daily Routine",
+    "level": "Beginner",
+    "skill": "Writing",
+    "duration": 20,
+    "description": "Write simple sentences about everyday routines.",
+    "materials": [
+      "Notebook",
+      "Routine word bank"
+    ],
+    "instructions": [
+      "Review common routine verbs.",
+      "Write one model sentence on the board.",
+      "Ask students to draft five sentences about their day.",
+      "Have partners check spelling and verb forms.",
+      "Invite students to read one sentence aloud."
+    ]
+  },
+  {
+    "id": 18,
+    "title": "Mini Dialogue Cards",
+    "level": "Beginner",
+    "skill": "Speaking",
+    "duration": 20,
+    "description": "Practice short conversations using familiar expressions.",
+    "materials": [
+      "Dialogue prompt cards"
+    ],
+    "instructions": [
+      "Review greetings and basic question forms.",
+      "Give pairs a simple dialogue prompt.",
+      "Allow students to rehearse with a partner.",
+      "Ask pairs to perform the exchange.",
+      "Switch partners and repeat with a new prompt."
+    ]
+  },
+  {
+    "id": 19,
+    "title": "Verb Tense Sort",
+    "level": "Elementary",
+    "skill": "Grammar",
+    "duration": 20,
+    "description": "Sort example sentences by their verb tense.",
+    "materials": [
+      "Sentence cards",
+      "Tense labels"
+    ],
+    "instructions": [
+      "Review the target tenses with examples.",
+      "Give groups mixed sentence cards.",
+      "Ask them to sort the cards under tense labels.",
+      "Have groups explain the clues they used.",
+      "Correct misunderstandings together."
+    ]
+  },
+  {
+    "id": 20,
+    "title": "Information Gap",
+    "level": "Elementary",
+    "skill": "Speaking",
+    "duration": 25,
+    "description": "Exchange information to complete a missing-data worksheet.",
+    "materials": [
+      "Two versions of a worksheet"
+    ],
+    "instructions": [
+      "Prepare partner sheets with different missing information.",
+      "Pair students and explain they must not show sheets.",
+      "Model questions for requesting missing details.",
+      "Students ask and answer to complete their sheets.",
+      "Check the finished information together."
+    ]
+  },
+  {
+    "id": 21,
+    "title": "Postcard Writing",
+    "level": "Elementary",
+    "skill": "Writing",
+    "duration": 25,
+    "description": "Write a short postcard using place and activity vocabulary.",
+    "materials": [
+      "Postcard template",
+      "Pencils"
+    ],
+    "instructions": [
+      "Show an example postcard.",
+      "Review greetings and useful place words.",
+      "Ask students to choose a travel destination.",
+      "Have them write a short message about their visit.",
+      "Exchange postcards for peer reading."
+    ]
+  },
+  {
+    "id": 22,
+    "title": "True or False Reading",
+    "level": "Elementary",
+    "skill": "Reading",
+    "duration": 20,
+    "description": "Check comprehension by judging statements about a text.",
+    "materials": [
+      "Short reading passage",
+      "True or false statements"
+    ],
+    "instructions": [
+      "Give students a short text to read.",
+      "Present statements related to its content.",
+      "Ask students to mark each statement true or false.",
+      "Have students highlight evidence in the text.",
+      "Correct false statements together."
+    ]
+  },
+  {
+    "id": 23,
+    "title": "Question Word Relay",
+    "level": "Elementary",
+    "skill": "Grammar",
+    "duration": 15,
+    "description": "Practice choosing the correct wh-question word.",
+    "materials": [
+      "Question prompts",
+      "Whiteboard"
+    ],
+    "instructions": [
+      "Review who, what, where, when, why, and how.",
+      "Divide learners into teams.",
+      "Display a sentence missing a question word.",
+      "Ask one representative per team to supply a suitable word.",
+      "Discuss why each answer fits."
+    ]
+  },
+  {
+    "id": 24,
+    "title": "Story Listening Map",
+    "level": "Elementary",
+    "skill": "Listening",
+    "duration": 25,
+    "description": "Record characters, places, and events while listening.",
+    "materials": [
+      "Short narrated story",
+      "Story map worksheet"
+    ],
+    "instructions": [
+      "Introduce the story and its setting.",
+      "Play or read the story once.",
+      "Students fill in a map of characters, places, and events.",
+      "Replay key parts as needed.",
+      "Compare maps with a partner and review."
+    ]
+  },
+  {
+    "id": 25,
+    "title": "Opinion Corners",
+    "level": "Intermediate",
+    "skill": "Speaking",
+    "duration": 25,
+    "description": "Express and justify opinions through classroom discussion.",
+    "materials": [
+      "Opinion statements",
+      "Four corner labels"
+    ],
+    "instructions": [
+      "Label corners from strongly agree to strongly disagree.",
+      "Read a discussion statement aloud.",
+      "Ask students to choose a position.",
+      "Invite them to explain their reasons in English.",
+      "Allow students to change positions after discussion."
+    ]
+  },
+  {
+    "id": 26,
+    "title": "Email Writing Workshop",
+    "level": "Intermediate",
+    "skill": "Writing",
+    "duration": 35,
+    "description": "Write a clear email for a real-life purpose.",
+    "materials": [
+      "Sample email",
+      "Writing checklist"
+    ],
+    "instructions": [
+      "Analyze the parts of a short example email.",
+      "Choose a realistic message purpose.",
+      "Ask students to draft a subject, greeting, body, and closing.",
+      "Have partners review clarity and tone.",
+      "Revise the email using feedback."
+    ]
+  },
+  {
+    "id": 27,
+    "title": "Context Clue Hunt",
+    "level": "Intermediate",
+    "skill": "Reading",
+    "duration": 25,
+    "description": "Infer the meanings of unfamiliar words from context.",
+    "materials": [
+      "Short reading passages",
+      "Highlighters"
+    ],
+    "instructions": [
+      "Select a text with a few unfamiliar words.",
+      "Ask learners to read the surrounding sentences.",
+      "Have them predict meanings using context clues.",
+      "Compare predictions in small groups.",
+      "Confirm meanings and discuss the clues."
+    ]
+  },
+  {
+    "id": 28,
+    "title": "Podcast Key Points",
+    "level": "Intermediate",
+    "skill": "Listening",
+    "duration": 30,
+    "description": "Identify main ideas and supporting details from audio.",
+    "materials": [
+      "Short age-appropriate podcast excerpt",
+      "Note-taking sheet"
+    ],
+    "instructions": [
+      "Introduce the episode topic.",
+      "Play the excerpt once for general understanding.",
+      "Ask students to note three key points.",
+      "Play it again to verify details.",
+      "Have groups summarize the message."
+    ]
+  },
+  {
+    "id": 29,
+    "title": "Error Correction Lab",
+    "level": "Intermediate",
+    "skill": "Grammar",
+    "duration": 25,
+    "description": "Spot and correct common English sentence errors.",
+    "materials": [
+      "Incorrect example sentences",
+      "Correction sheet"
+    ],
+    "instructions": [
+      "Provide sentences with one targeted error each.",
+      "Ask learners to identify the error individually.",
+      "Have pairs propose corrected versions.",
+      "Invite explanations of the grammar rules.",
+      "Reveal and discuss the corrections."
+    ]
+  },
+  {
+    "id": 30,
+    "title": "Vocabulary Categories Race",
+    "level": "Intermediate",
+    "skill": "Vocabulary",
+    "duration": 20,
+    "description": "Expand topic vocabulary through quick category challenges.",
+    "materials": [
+      "Category prompts",
+      "Paper",
+      "Timer"
+    ],
+    "instructions": [
+      "Choose themes such as travel, food, or technology.",
+      "Divide students into small teams.",
+      "Give teams a short time to write matching words.",
+      "Compare unique and accurate words.",
+      "Review meanings and pronunciation."
+    ]
+  },
+  {
+    "id": 31,
+    "title": "Persuasive Paragraph",
+    "level": "Advanced",
+    "skill": "Writing",
+    "duration": 40,
+    "description": "Develop a convincing argument in one organized paragraph.",
+    "materials": [
+      "Writing prompt",
+      "Planning organizer"
+    ],
+    "instructions": [
+      "Present a question with more than one defensible position.",
+      "Model a topic sentence and supporting reasons.",
+      "Ask students to plan an argument with examples.",
+      "Have them write and revise a paragraph.",
+      "Use a checklist to assess organization and evidence."
+    ]
+  },
+  {
+    "id": 32,
+    "title": "Article Analysis",
+    "level": "Advanced",
+    "skill": "Reading",
+    "duration": 35,
+    "description": "Analyze an article’s argument, evidence, and tone.",
+    "materials": [
+      "Age-appropriate opinion article",
+      "Analysis worksheet"
+    ],
+    "instructions": [
+      "Choose a short opinion article.",
+      "Ask students to identify the author’s main claim.",
+      "Highlight supporting evidence and language choices.",
+      "Discuss the intended audience and tone.",
+      "Write a brief critical response."
+    ]
+  },
+  {
+    "id": 33,
+    "title": "News Summary Challenge",
+    "level": "Advanced",
+    "skill": "Listening",
+    "duration": 35,
+    "description": "Summarize an audio news report accurately.",
+    "materials": [
+      "Short news audio report",
+      "Note-taking sheet"
+    ],
+    "instructions": [
+      "Preview key topic vocabulary.",
+      "Play the report and ask students to note the main issue.",
+      "Play again for key facts and perspectives.",
+      "Students prepare a concise spoken or written summary.",
+      "Compare summaries for accuracy and neutrality."
+    ]
+  },
+  {
+    "id": 34,
+    "title": "Conditional Scenarios",
+    "level": "Advanced",
+    "skill": "Grammar",
+    "duration": 30,
+    "description": "Use conditionals to discuss hypothetical outcomes.",
+    "materials": [
+      "Scenario cards"
+    ],
+    "instructions": [
+      "Review the conditional structures being practiced.",
+      "Give groups cards describing hypothetical situations.",
+      "Ask students to write conditional responses.",
+      "Have groups compare possible outcomes.",
+      "Review verb forms and meaning."
+    ]
+  },
+  {
+    "id": 35,
+    "title": "Academic Word Families",
+    "level": "Advanced",
+    "skill": "Vocabulary",
+    "duration": 30,
+    "description": "Explore word forms and usage in academic English.",
+    "materials": [
+      "Word-family worksheet",
+      "Dictionary access"
+    ],
+    "instructions": [
+      "Introduce a set of academic root words.",
+      "Ask learners to identify related nouns, verbs, and adjectives.",
+      "Use a dictionary to check spelling and meaning.",
+      "Have students write contextual sentences with different forms.",
+      "Discuss common collocations."
+    ]
+  },
+  {
+    "id": 36,
+    "title": "Problem-Solving Meeting",
+    "level": "Advanced",
+    "skill": "Speaking",
+    "duration": 40,
+    "description": "Collaborate to propose and defend solutions to a problem.",
+    "materials": [
+      "Problem scenario",
+      "Meeting role cards"
+    ],
+    "instructions": [
+      "Introduce a realistic community or school problem.",
+      "Assign meeting roles to small groups.",
+      "Give time to prepare possible solutions.",
+      "Hold a structured discussion to agree on a plan.",
+      "Ask each group to present its decision and reasoning."
+    ]
+  }
+]

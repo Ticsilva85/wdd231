@@ -275,6 +275,92 @@ main h1::after {
     gap: 20px;
 }
 
+/* ===== Activities Catalog ===== */
+
+.activity-card {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.activity-card h3 {
+    font-size: 1.3rem;
+    color: var(--header-color);
+}
+
+.activity-description {
+    line-height: 1.5;
+}
+
+.activity-level,
+.activity-skill,
+.activity-duration {
+    font-size: 0.95rem;
+}
+
+.activity-details {
+    margin-top: auto;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    background-color: var(--header-color);
+    color: #fff;
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.activity-details:hover {
+    background-color: var(--body-font-color);
+}
+
+.activity-details:focus-visible {
+    outline: 3px solid var(--header-color);
+    outline-offset: 3px;
+}
+
+/* ===== Search Activities Buttons ===== */
+
+#search-activities,
+#clear-filter {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+#search-activities {
+    background-color: var(--accent-color);
+    color: var(--header-color);
+}
+
+#clear-filter {
+    background-color: var(--background-color);
+    color: var(--header-color);
+}
+
+#load-more {
+    display: block;
+    margin: 30px auto;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 6px;
+    background-color: var(--header-color);
+    color: #fff;
+    font: inherit;
+    cursor: pointer;
+}
+
+#load-more[hidden] {
+    display: none;
+}
+
 /* ===== FOOTER ===== */
 footer {
     background-color: var(--header-color);
