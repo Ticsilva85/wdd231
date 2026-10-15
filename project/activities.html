@@ -8,13 +8,14 @@
     <meta name="author" content="Tiago Cavalcante da Silva">
 
     <!-- STYLES -->
-    <link rel="stylesheet" href="./styles/project-larger.css">
     <link rel="stylesheet" href="./styles/project-small.css">
+    <link rel="stylesheet" href="./styles/project-larger.css">
+
 
     <!-- SCRIPTS -->
-    <script src="./script/main.js"></script>
+    <script src="./script/main.js" defer></script>
     <script src="./script/form.js"></script>
-    <script src="./script/suggest.html"></script>
+    <script src="./script/suggest.js"></script>
     <script src="./script/favorites.js"></script>
     <script src="./script/thankyou.js"></script>
 
@@ -32,22 +33,29 @@
 
         <a href="index.html" class="site-logo">English Activities Hub</a>
 
-        <nav class="header-nav">
-            <ul>
+        <button
+            type="button"
+            class="hamburger"
+            id="menu"
+            aria-label="Open navigation menu"
+            aria-controls="header-menu"
+            aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav 
+            class="nav-menu" 
+            id="header-menu" 
+            aria-label="Main Navigation">
+            
+            <ul class="navigation">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="activities.html" class="active">Activities</a></li>
+                <li><a href="activities.html" class="active" aria-current="page">Activities</a></li>
                 <li><a href="suggest.html">Suggestions</a></li>
             </ul>
         </nav>
-
-        <button
-            type="button"
-            id="menu-button"
-            aria-label="Open navigation menu"
-            aria-controls="primary-navigation"
-            aria-expanded="false">
-            ☰
-        </button>
     </header>
 
     <main>

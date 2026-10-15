@@ -1,9 +1,45 @@
-:root {
-    --background-color: #F2E4DF; /* Seashell */
-    --header-color:#a5223f; /* Rosewood */
-    --body-font-color: #2F2F2F; /* Graphite */
-    --accent-color: #f0df88; /* Goden Sand */
+@media only screen and (min-width: 1024px) {
 
-    --body-font: "Rubik", sans-serif;
+    /* ===== HEADER ===== */
+    header {
+        grid-template-columns: auto 1fr auto;
+    }
+
+    /* ===== HAMBURGER ===== */
+    .hamburger {
+        display: none;
+    }
+
+    /* ===== NAVIGATION ===== */
+    .nav-menu,
+    .nav-menu.show {
+        display: block;
+        position: static;
+        width: auto;
+        background-color: transparent;
+        box-shadow: none;
+
+        /* Remove mobile animation properties */
+        opacity: 1;
+        transform: none;
+        visibility: visible;
+        pointer-events: auto;
+        transition: none;
+    }
+
+    .navigation {
+        display: flex;
+        align-items: center;
+        width: auto;
+        padding: 0;
+    }
+
+    .navigation .active {
+        background-color: var(--header-color);
+        color: var(--background-color);
+        text-decoration: underline; 
+        text-decoration-color: var(--accent-color);
+        text-decoration-thickness: 2px;
+        text-underline-offset: 10px;
+    }
 }
-

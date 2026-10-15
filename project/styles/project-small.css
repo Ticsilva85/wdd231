@@ -17,14 +17,17 @@ html {
     color: var(--body-font-color);
 }
 
+/* ===== HEADER ===== */
 header {
+    position: relative;
     display: grid;
-    grid-template-columns: auto auto 0.5fr 0.5fr;
+    grid-template-columns: 50px minmax(0, 1fr) 50px;
     gap: 10px;
     background-color: var(--header-color);
     width: 100%;
     padding: 10px;
     align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
 
 header > img {
@@ -36,12 +39,112 @@ header > img {
     text-decoration:none;
     color: white;
     font-size: 1.5rem;
+    font-weight: bold;
 }
 
-.header-nav {
-    display:none;
+/* ===== HAMBURGER MENU ===== */
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    width: 50px;
+    height: 50px;
+    border: none;
+    background-color: var(--header-color);
+    cursor: pointer;
 }
 
-#menu-button {
-    font-size: 1.5rem;
+.hamburger span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: var(--background-color);
+    border-radius: 3px;
+
+    transition:
+        transform 0.3s ease,
+        opacity 0.3s ease;
+}
+
+/* First line */
+.hamburger.show span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+}
+
+/* Middle line */
+.hamburger.show span:nth-child(2) {
+    opacity: 0;
+}
+
+/* Last line */
+.hamburger.show span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+}
+
+/* ===== NAVIGATION MENU ===== */
+.nav-menu {
+    display: block;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 50%;
+    background-color: var(--header-color);
+    color: var(--background-color);
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+
+    /* Animation */
+    opacity: 0;
+    transform: translateY(-10px);
+    visibility: hidden;
+    pointer-events: none;
+
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease,
+        visibility 0.3s;
+}
+
+.nav-menu.show {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.navigation {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu a {
+    display: block;
+    padding: 15px;
+    text-align: center;
+    text-decoration: none;
+    color: var(--background-color);
+    font-weight: 500;
+}
+
+.navigation .active {
+    background-color: var(--accent-color);
+    color: var(--header-color);
+}
+
+/* Keyboard navigation */
+.nav-menu a:focus-visible,
+.hamburger:focus-visible {
+    outline: 3px solid var(--accent-color);
+    outline-offset: 3px;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    .hamburger span,
+    .nav-menu {
+        transition: none;
+    }
 }
