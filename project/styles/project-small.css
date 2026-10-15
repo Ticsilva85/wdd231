@@ -148,3 +148,35 @@ header > img {
         transition: none;
     }
 }
+
+/* ===== FOOTER ===== */
+footer {
+    background-color: var(--header-color);
+    color: var(--background-color);
+}
+
+.footer-header {
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-header .title {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* ===== Footer Notes ===== */
+.footer-notes {
+    text-align: center;
+    color: var(--color-background);
+    padding: 20px;
+}
+
+.footer-notes > p {
+    padding: 5px;
+}
+
+.footer-notes .course {
+    font-size: 1.2rem;
+    font-weight: 500;
+}

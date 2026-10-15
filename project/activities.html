@@ -59,10 +59,97 @@
     </header>
 
     <main>
+        <h1>Classroom Activites</h1>
+        
+        <section class="activities-intro" aria-labelledby="intro-title">
+            <h2 id="intro-title">Explor Our Activities</h2>
+
+            <p>Discover engaging English classroom activities designed
+            to help teachers create interactive and meaningful
+            learning experiences.</p>
+        </section>
+
+        <section class="filter-container" aria-labelledby="filters-title">
+            <h2 id="filters-title">Find an Activity</h2>
+            
+            <div class="filters-container">
+                <div class="filter-group">
+                    <label for="activity-search">Search Activities</label>
+                    <input 
+                        type="search"
+                        id="activity-search"
+                        name="activity-search"
+                        placeholder="Search by activity name..."
+                    >
+                </div>
+
+                <div class="filter-group">
+                    <label for="level-filter">Level</label>
+                    <select name="level-filter" id="level-filter">
+                        <option value="all">All Levels</option>
+                        <option value="beginner">Beginner</option>
+                        <option value="elementary">Elementary</option>
+                        <option value="intermediate">Intermediate</option>
+                        <option value="advanced">Advanced</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label for="skill-filter">Skill</label>
+                    <select name="skill-filter" id="skill-filter">
+                        <option value="all">All Skills</option>
+                        <option value="vocabulary">Vocabulary</option>
+                        <option value="grammar">Grammar</option>
+                        <option value="reading">Reading</option>
+                        <option value="writing">Writing</option>
+                        <option value="listening">Listening</option>
+                        <option value="speaking">Speaking</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label for="duration-filter">Duration</label>
+                    <select name="duration-filter" id="duration-filter">
+                        <option value="all">Any Duration</option>
+                        <option value="15">Up to 15 minutes</option>
+                        <option value="20">Up tp 20 minutes</option>
+                        <option value="30">30+ minutes</option>
+                    </select>
+                </div>
+
+                <button type="button" id="clear-filter">
+                    Clear Filters
+                </button>
+            </div>
+        </section>
+
+        <section class="activities-catalog" aria-labelledby="catalog-title">
+            <h2>Available Activities</h2>
+
+            <p id="results-count" role="status" aria-live="polite">
+                Loading Activities...
+            </p>
+
+            <div id="activities-container" class="activities-grid">
+                <!-- Activity cards will be generated using JavaScript -->
+            </div>
+
+        </section>
+
     </main>
 
     <footer>
-        
+        <div class="footer-larger">
+            <div class="footer-header">
+                <span class="title">English Activities Hub</span>
+            </div>
+        </div>
+            <div class="footer-notes">
+                <p class="course">WDD 231: Dynamic Web Fundamentals</p>
+                <p>Tiago Cavalcante | Brazil</p>
+                <p>&copy; <span id="currentyear"></span> Recife Chamber of Commerce</p>
+                <p id="lastModified"></p>
+            </div>
     </footer>
 </body>
 </html>
