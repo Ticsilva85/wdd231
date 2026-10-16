@@ -182,9 +182,9 @@ main h1 {
 main h1::after {
     content: "";
     position: absolute;
-    bottom: 0;
+    bottom: -5px;
     left: 0;
-    width: 65px;
+    width: 100px;
     height: 3px;
     background-color: var(--header-color);
     border-radius: 3px;
@@ -372,7 +372,7 @@ main h1::after {
     outline-offset: 3px;
 }
 
-/* ===== CARD ACTIONS ===== */
+/* ===== Card Actions ===== */
 .card-actions {
     display: flex;
     align-items: stretch;
@@ -405,24 +405,24 @@ main h1::after {
         color 0.3s ease;
 }
 
-/* ===== FAVORITE ACTIVE STATE ===== */
+/* ===== Favorite Active State ===== */
 .favorite-button[aria-pressed="true"] {
     background-color: var(--soft-highlight);
     color: var(--header-color);
 }
 
-/* ===== FAVORITE HOVER ===== */
+/* ===== Favorite Hover ===== */
 .favorite-button:hover {
     background-color: var(--soft-highlight);
 }
 
-/* ===== FAVORITE KEYBOARD FOCUS ===== */
+/* ===== Favorite Keyboard Focus ===== */
 .favorite-button:focus-visible {
     outline: 3px solid var(--secondary-accent);
     outline-offset: 3px;
 }
 
-/* ===== FAVORITES FILTER ===== */
+/* ===== Favorites Filter ===== */
 .favorites-filter {
     display: flex;
     align-items: center;
@@ -502,9 +502,8 @@ main h1::after {
     width: 100%;
 }
 
-/* ================== ACTIVITY MODAL ================== */
-
-/* ===== DIALOG CONTAINER ===== */
+/* ====== ACTIVITY MODAL ===== */
+/* ===== Dialog Container ===== */
 #activity-dialog {
     position: fixed;
     width: min(90%, 650px);
@@ -519,12 +518,12 @@ main h1::after {
     overflow-y: auto;
 }
 
-/* ===== MODAL BACKDROP ===== */
+/* ===== Modal Backdrop ===== */
 #activity-dialog::backdrop {
     background-color: rgba(0, 0, 0, 0.65);
 }
 
-/* ===== DIALOG CONTENT ===== */
+/* ===== Dialog Content ===== */
 .dialog-content {
     display: flex;
     flex-direction: column;
@@ -532,7 +531,7 @@ main h1::after {
     padding: 25px;
 }
 
-/* ===== CLOSE BUTTON ===== */
+/* ===== Close Button ===== */
 #close-dialog {
     align-self: flex-end;
     border: none;
@@ -543,13 +542,13 @@ main h1::after {
     cursor: pointer;
 }
 
-/* ===== MODAL TITLE ===== */
+/* ===== Modal Title ===== */
 #dialog-title {
     color: var(--header-color);
     font-size: 1.5rem;
 }
 
-/* ===== MODAL BADGES ===== */
+/* ===== Modal Badges ===== */
 #dialog-badges {
     display: flex;
     flex-wrap: wrap;
@@ -557,18 +556,18 @@ main h1::after {
     gap: 10px;
 }
 
-/* ===== MODAL DESCRIPTION ===== */
+/* ===== Modal Descriptions ===== */
 #dialog-description {
     line-height: 1.6;
 }
 
-/* ===== MODAL SECTION TITLES ===== */
+/* ===== Modal Section Titles ===== */
 .dialog-content h3 {
     color: var(--header-color);
     font-size: 1.2rem;
 }
 
-/* ===== MATERIALS AND INSTRUCTIONS ===== */
+/* ===== Materials and Instructions ===== */
 #dialog-materials,
 #dialog-instructions {
     padding-left: 25px;
@@ -580,15 +579,101 @@ main h1::after {
     margin-bottom: 10px;
 }
 
-/* ===== KEYBOARD FOCUS ===== */
+/* ===== Keyboard Focus ===== */
 #close-dialog:focus-visible {
     outline: 3px solid var(--secondary-accent);
     outline-offset: 3px;
 }
 
+/* ================== SUGGEST.HTML ================== */
+
+aside {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+
+aside > h2 {
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+aside > p {
+    text-align: center;
+    font-size: 1rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    margin: 20px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+
+.input-form {
+    display: flex;
+    flex-direction: column;
+    gap: 5px
+}
+
+.input-form label {
+    font-weight: 500;
+}
+
+.input-form input, 
+.input-form select, 
+.input-form textarea {
+    font-size: 1rem;
+    padding: 5px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+}
+
+.input-form textarea {
+    width: auto;
+    height: 100px;
+    padding: 10px;
+}
+
+form > button {
+    width: fit-content;
+    padding: 10px 15px;
+    border: 1px solid var(--header-color);
+    color: var(--background-color);
+    background-color: var(--header-color);
+    font-weight: bold;
+    font-size: 1.2rem;
+    border-radius: 6px;
+    align-self: center;
+    box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.3);
+    transition: background-color ease-in-out 0.3s;
+}
+
+form > button:hover {
+    background-color: var(--accent-color);
+    color: var(--header-color);
+    border: 1px solid var(--header-color);
+}
+
+/* ===== Suggest Main ===== */
+.suggest-main {
+    padding-bottom: 0;
+}
+
+.suggest-aside {
+    margin-inline: -20px;
+}
 
 /* ===== FOOTER ===== */
 footer {
+    position: relative;
+    width: 100%;
+    margin-top: 120px;
     background-color: var(--header-color);
     color: var(--background-color);
 }
@@ -618,4 +703,20 @@ footer {
 .footer-notes .course {
     font-size: 1rem;
     font-weight: 500;
+}
+
+/* ===== Footer Wave ===== */
+footer::before {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    width: 100%;
+    height: 80px;
+
+    background-image: url("../images/wave.svg");
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: 100% 100%;
+    pointer-events: none;
 }

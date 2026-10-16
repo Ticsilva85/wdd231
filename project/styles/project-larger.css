@@ -98,4 +98,12 @@
         grid-template-columns: repeat(3, minmax(0, 1fr));
         gap: 25px;
     }
+
+
+    /* ===== Wage SVG ===== */
+/* ===== FOOTER WAVE ===== */
+    footer::before {
+        height: 100px;
+        background-size: 100% 100%;
+    }
 }
