@@ -267,6 +267,20 @@ main h1::after {
     outline-offset: 3px;
 }
 
+/* ===== Filter Actions ===== */
+.filter-actions {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    justify-items: center;
+}
+
+.filter-actions button {
+    width: 100%;
+}
+
 /* ===== Activities Grid ===== */
 .activities-grid {
     display: grid;
@@ -459,6 +473,9 @@ main h1::after {
 
 #search-activities,
 #clear-filter {
+    width: 100%;
+    max-width: 250px;
+    align-self: center;
     padding: 12px 20px;
     border: none;
     border-radius: 6px;
@@ -495,17 +512,6 @@ main h1::after {
 #search-activities:disabled {
     opacity: 0.6;
     cursor: not-allowed;
-}
-
-/* ===== FILTER ACTIONS - MOBILE ===== */
-.filter-actions {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr);
-    gap: 15px;
-}
-
-.filter-actions button {
-    width: 100%;
 }
 
 /* ====== ACTIVITY MODAL ===== */
@@ -616,7 +622,7 @@ form {
     padding: 20px;
     margin-inline: -20px;
     background-color: var(--header-color);
-    color: var(--background-color)
+    color: var(--background-color);
 }
 
 form > h2 {
@@ -650,15 +656,17 @@ form > h2 {
 }
 
 form > button {
-    width: fit-content;
+    width: 100%;
+    max-width: 250px;
+    align-self: center;
     padding: 10px 15px;
+    margin-top: 10px;
     border: 1px solid var(--header-color);
     color: var(--header-color);
     background-color: var(--accent-color);
     font-weight: bold;
     font-size: 1.2rem;
     border-radius: 6px;
-    align-self: center;
     box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.3);
     transition: background-color ease-in-out 0.3s;
     cursor: pointer;

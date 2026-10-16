@@ -91,18 +91,6 @@
         align-self: center;
     }
 
-    /* ===== Filter Actions ===== */
-    .filter-actions {
-        grid-column: 1;
-        display: grid;
-        gap: 15px;
-    }
-
-    .filter-actions button {
-        width: 100%;
-        min-width: 0;
-    }
-
     /* ===== Activities Grid ===== */
     .activities-grid {
         display: grid;

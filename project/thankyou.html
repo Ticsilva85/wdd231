@@ -3,26 +3,123 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>English Activities Hub</title>
+    <title>English Activities Hub | Thank You</title>
     <meta name="description" content="Thank you for sharing your activity suggestion with English Activity Hub. Review your submitted information and continue exploring teaching resources.">
     <meta name="author" content="Tiago Cavalcante da Silva">
 
     <!-- STYLES -->
-    <link rel="stylesheet" href="./styles/project-small.css">
+    <link rel="stylesheet" href="./styles/project-small.css"> 
     <link rel="stylesheet" href="./styles/project-larger.css">
 
+    <!-- META CONTENT -->
+    <meta property="og:title" content="English Activities Hub | Suggestions">
+    <meta property="og:description" content="Share your ideas for English classroom activities and help inspire creative, engaging teaching experiences.">
+    <meta property="og:image" content="https://ticsilva85.github.io/wdd231/project/images/og-image.webp">
+    <meta property="og:url" content="https://ticsilva85.github.io/wdd231/project/suggest.html">
+    <meta property="og:type" content="website">
+
     <!-- SCRIPTS -->
-    <script src="./scripts/main.js"></script>
+    <script src="./scripts/main.js" defer></script>
     <script src="./scripts/form.js"></script>
     <script src="./scripts/suggest.js"></script>
     <script src="./scripts/thankyou.js"></script>
 
     <!-- FAVICON -->
-    <link rel="icon" href="./images/favicon.ico">
+    <link rel="icon" href="./images/final-project-favicon.ico">
 
     <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    
+    <header>
+        <img src="./images/final-project-logo.svg" alt="English Activities Hub logo">
+
+        <a href="index.html" class="site-logo">English Activities Hub</a>
+
+        <button
+            type="button"
+            class="hamburger"
+            id="menu"
+            aria-label="Open navigation menu"
+            aria-controls="header-menu"
+            aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav 
+            class="nav-menu" 
+            id="header-menu" 
+            aria-label="Main Navigation">
+            
+            <ul class="navigation">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="activities.html">Activities</a></li>
+                <li><a href="suggest.html" class="active" aria-current="page">Suggestions</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="thankyou-main">
+        <section class="thankyou-container">
+            <h1>Thank You for Your Suggestion!</h1>
+
+            <p class="thankyou-message">
+                Your contribution helps our community of English teachers
+                grow! By sharing your classroom activity, you inspire
+                creative teaching and meaningful learning experiences.
+                Thank you for being part of English Activities Hub!
+            </p>
+
+            <h2>Your Activity Submission</h2>
+
+            <div class="submission-details">
+                <p><strong>Teacher's Name:</strong>
+                    <span id="result-name"></span>
+                </p>
+
+                <p><strong>Email Address:</strong>
+                    <span id="result-email"></span>
+                </p>
+
+                <p><strong>Activity Title:</strong>
+                    <span id="result-title"></span>
+                </p>
+
+                <p><strong>Language Level:</strong>
+                    <span id="result-level"></span>
+                </p>
+
+                <p><strong>Activity Skill:</strong>
+                    <span id="result-skill"></span>
+                </p>
+
+                <p><strong>Activity Description:</strong>
+                    <span id="result-description"></span>
+                </p>
+            </div>
+
+            <a href="index.html" class="back-home">
+                Return to Home
+            </a>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-larger">
+            <div class="footer-header">
+                <span class="title">English Activities Hub</span>
+            </div>
+        </div>
+            <div class="footer-notes">
+                <p class="course">WDD 231: Dynamic Web Fundamentals</p>
+                <p>Tiago Cavalcante | Brazil</p>
+                <p>&copy; <span id="currentyear"></span> English Activities Hub</p>
+                <p id="lastModified"></p>
+            </div>
+    </footer>
 </body>
 </html>
