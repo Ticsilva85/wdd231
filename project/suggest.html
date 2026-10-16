@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>English Activities Hub</title>
+    <title>English Activities Hub | Suggestions</title>
     <meta name="description" content="Share your teaching ideas with English Activity Hub. Suggest creative classroom activities and help other English teachers improve their lessons.">
     <meta name="author" content="Tiago Cavalcante da Silva">
 
@@ -38,7 +38,7 @@
         <button
             type="button"
             class="hamburger"
-            id="menu"ac
+            id="menu"
             aria-label="Open navigation menu"
             aria-controls="header-menu"
             aria-expanded="false">
@@ -64,16 +64,23 @@
         <h1>Suggest an Activity</h1>
 
         <section class="suggest-aside">
-            <aside>
-                <h2>Share Your Ideas, Inspire Others!</h2>
-                <p>
-                    Share your favorite English classroom activities
-                    and inspire other teachers! Your creative ideas
-                    can make learning more engaging and enjoyable.
-                    Submit your suggestion and help our teaching
-                    community grow!
-                </p>
-            </aside>
+            <div class="suggest-intro">
+                <aside>
+                    <h2>Share Your Ideas, Inspire Others!</h2>
+                    <p>
+                        Share your favorite English classroom activities
+                        and inspire other teachers! Your creative ideas
+                        can make learning more engaging and enjoyable.
+                        Submit your suggestion and help our teaching
+                        community grow!
+                    </p>
+                </aside>
+
+                <picture>
+                    <source media="(min-width: 825px)" srcset="./images/aside-larger.webp">
+                    <img src="./images/aside-vertical.webp" alt="North America Countries Flags" class="suggest-image">
+                </picture>
+            </div>
 
             <form action="thankyou.html" method="get">
                 <div class="input-form">
@@ -111,8 +118,8 @@
                 <div class="input-form">
                     <label for="language-level">Language Level</label>
                     <select 
-                        id="labguage-level"
-                        name="labguage-level" 
+                        id="language-level"
+                        name="language-level" 
                         required>
 
                         <option value="" disabled selected>Choose a Language Level</option>
@@ -156,7 +163,7 @@
                     Submit Suggestion
                 </button>
             </form>
-        </section>
+        </section>        
     </main>
 
     <footer>

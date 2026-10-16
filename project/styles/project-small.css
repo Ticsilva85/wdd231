@@ -666,7 +666,36 @@ form > button:hover {
 }
 
 .suggest-aside {
-    margin-inline: -20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    min-width: 0;
+    margin-inline: 0;
+}
+
+/* ===== Suggest Intro ===== */
+.suggest-intro {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    min-width: 0;
+}
+
+.suggest-intro picture {
+    display: block;
+    width: 100%;
+    min-width: 0;
+}
+
+.suggest-image {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    max-height: 350px;
+    object-fit: cover;
+    border-radius: 12px;
 }
 
 /* ===== FOOTER ===== */
