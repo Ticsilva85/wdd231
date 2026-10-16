@@ -1,9 +1,24 @@
 :root {
+    /* ===== MAIN COLORS ===== */
     --background-color: #F2E4DF; /* Seashell */
-    --header-color:#a5223f; /* Rosewood */
+    --header-color: #A5223F; /* Rosewood */
     --body-font-color: #2F2F2F; /* Graphite */
-    --accent-color: #f0df88; /* Goden Sand */
+    --accent-color: #F0DF88; /* Golden Sand */
 
+    /* ===== COMPLEMENTARY COLORS ===== */
+    --card-background: #FFFFFF;
+    --section-background: #FAF5F2;
+    --border-color: #D5C3BC;
+    --secondary-accent: #537C78;
+    --soft-highlight: #E9C9D1;
+    --success-color: #657747;
+
+    /* ===== BADGE COLORS ===== */
+    --skill-background: #DCEBE8;
+    --skill-text: #28514D;
+    --level-text: #672035;
+
+    /* ===== TYPOGRAPHY ===== */
     --body-font: "Rubik", sans-serif;
 }
 
@@ -244,28 +259,10 @@ main h1::after {
 
 .filter-group input:focus-visible,
 .filter-group select:focus-visible,
-#clear-filters:focus-visible {
-    outline: 3px solid #333;
+#search-activities:focus-visible,
+#clear-filter:focus-visible {
+    outline: 3px solid var(--accent-color);
     outline-offset: 3px;
-}
-
-/* ===== Clean Filters Button ===== */
-#clear-filter {
-    width: fit-content;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 6px;
-    background-color: var(--accent-color);
-    color: var(--header-color);
-    font: inherit;
-    font-weight: 600;
-    font-size: 1rem;
-    cursor: pointer;
-    box-shadow: rgba(0, 0, 0, 0.16) 2px 5px 8px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-}
-
-#clear-filter:hover {
-    background-color: var(--background-color);
 }
 
 /* ===== Activities Grid ===== */
@@ -277,41 +274,85 @@ main h1::after {
 
 /* ===== Activities Catalog ===== */
 
+/* ===== Activity Card ===== */
 .activity-card {
     display: flex;
     flex-direction: column;
     gap: 15px;
     padding: 20px;
-    background-color: #fff;
+    min-width: 0;
+    background-color: var(--card-background);
+    border: 1px solid var(--border-color);
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.10);
+    transition: box-shadow 0.3s ease;
 }
 
+.activity-card:hover {
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.18);
+}
+
+/* ===== Card Title ===== */
 .activity-card h3 {
     font-size: 1.3rem;
     color: var(--header-color);
 }
 
+/* ===== Card Description ===== */
 .activity-description {
     line-height: 1.5;
+    color: var(--body-font-color);
 }
 
+/* ===== Card Badges Container ===== */
+.activity-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+/* ===== Card Badges General Style ===== */
 .activity-level,
-.activity-skill,
+.activity-skill {
+    display: inline-block;
+    width: fit-content;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+/* ===== Level Badge ===== */
+.activity-level {
+    background-color: var(--soft-highlight);
+    color: var(--level-text);
+}
+
+/* ===== Skill Badge ===== */
+.activity-skill {
+    background-color: var(--skill-background);
+    color: var(--skill-text);
+}
+
+/* ===== Card Duration ===== */
 .activity-duration {
     font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--secondary-accent);
 }
 
+/* ===== Card Button ===== */
 .activity-details {
     margin-top: auto;
     padding: 12px 20px;
     border: none;
     border-radius: 6px;
     background-color: var(--header-color);
-    color: #fff;
+    color: #FFFFFF;
     font: inherit;
     font-weight: 600;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 .activity-details:hover {
@@ -319,11 +360,19 @@ main h1::after {
 }
 
 .activity-details:focus-visible {
-    outline: 3px solid var(--header-color);
+    outline: 3px solid var(--secondary-accent);
     outline-offset: 3px;
 }
 
-/* ===== Search Activities Buttons ===== */
+/* ===== Reduced Motion ===== */
+@media (prefers-reduced-motion: reduce) {
+    .activity-card,
+    .activity-details {
+        transition: none;
+    }
+}
+
+/* ===== Search Activities Button ===== */
 
 #search-activities,
 #clear-filter {
@@ -333,16 +382,10 @@ main h1::after {
     font: inherit;
     font-weight: 600;
     cursor: pointer;
-}
-
-#search-activities {
+    width: 200px;
     background-color: var(--accent-color);
     color: var(--header-color);
-}
-
-#clear-filter {
-    background-color: var(--background-color);
-    color: var(--header-color);
+    box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.3); 
 }
 
 #load-more {
@@ -360,6 +403,92 @@ main h1::after {
 #load-more[hidden] {
     display: none;
 }
+
+
+/* ================== ACTIVITY MODAL ================== */
+
+/* ===== DIALOG CONTAINER ===== */
+#activity-dialog {
+    position: fixed;
+    width: min(90%, 650px);
+    max-height: 85vh;
+    margin: auto;
+    padding: 0;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    background-color: var(--card-background);
+    color: var(--body-font-color);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    overflow-y: auto;
+}
+
+/* ===== MODAL BACKDROP ===== */
+#activity-dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.65);
+}
+
+/* ===== DIALOG CONTENT ===== */
+.dialog-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 25px;
+}
+
+/* ===== CLOSE BUTTON ===== */
+#close-dialog {
+    align-self: flex-end;
+    border: none;
+    background: transparent;
+    color: var(--header-color);
+    font-size: 2rem;
+    line-height: 1;
+    cursor: pointer;
+}
+
+/* ===== MODAL TITLE ===== */
+#dialog-title {
+    color: var(--header-color);
+    font-size: 1.5rem;
+}
+
+/* ===== MODAL BADGES ===== */
+#dialog-badges {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+}
+
+/* ===== MODAL DESCRIPTION ===== */
+#dialog-description {
+    line-height: 1.6;
+}
+
+/* ===== MODAL SECTION TITLES ===== */
+.dialog-content h3 {
+    color: var(--header-color);
+    font-size: 1.2rem;
+}
+
+/* ===== MATERIALS AND INSTRUCTIONS ===== */
+#dialog-materials,
+#dialog-instructions {
+    padding-left: 25px;
+    line-height: 1.6;
+}
+
+#dialog-materials li,
+#dialog-instructions li {
+    margin-bottom: 10px;
+}
+
+/* ===== KEYBOARD FOCUS ===== */
+#close-dialog:focus-visible {
+    outline: 3px solid var(--secondary-accent);
+    outline-offset: 3px;
+}
+
 
 /* ===== FOOTER ===== */
 footer {

@@ -14,6 +14,15 @@ const loadMoreButton = document.querySelector("#load-more");
 const activitiesContainer = document.querySelector("#activities-container");
 const resultsCount = document.querySelector("#results-count");
 
+/* ===== DIALOG ELEMENTS ===== */
+const activityDialog = document.querySelector("#activity-dialog");
+const closeDialogButton = document.querySelector("#close-dialog");
+
+const dialogTitle = document.querySelector("#dialog-title");
+const dialogBadges = document.querySelector("#dialog-badges");
+const dialogDescription = document.querySelector("#dialog-description");
+const dialogMaterials = document.querySelector("#dialog-materials");
+const dialogInstructions = document.querySelector("#dialog-instructions");
 
 /* ===== GLOBAL VARIABLES ===== */
 let allActivities = [];
@@ -21,7 +30,6 @@ let filteredActivities = [];
 let visibleCount = 6;
 
 const activitiesPerPage = 6;
-
 
 /* ===== LOAD ACTIVITIES FROM JSON ===== */
 async function getActivities() {
@@ -52,6 +60,67 @@ async function getActivities() {
 
         searchButton.disabled = true;
     }
+}
+
+
+/* ===== OPEN ACTIVITY DETAILS MODAL ===== */
+function openActivityDialog(activityId) {
+
+    // Find the selected activity in the original array
+    const activity = allActivities.find(
+        item => item.id === Number(activityId)
+    );
+
+    if (!activity) {
+        console.error("Activity not found:", activityId);
+        return;
+    }
+
+    /* ===== ACTIVITY TITLE ===== */
+    dialogTitle.textContent = activity.title;
+
+    /* ===== ACTIVITY DESCRIPTION ===== */
+    dialogDescription.textContent = activity.description;
+
+    /* ===== ACTIVITY BADGES ===== */
+    dialogBadges.replaceChildren();
+
+    const level = document.createElement("span");
+    level.classList.add("activity-level");
+    level.textContent = activity.level;
+
+    const skill = document.createElement("span");
+    skill.classList.add("activity-skill");
+    skill.textContent = activity.skill;
+
+    const duration = document.createElement("span");
+    duration.classList.add("activity-duration");
+    duration.textContent = `${activity.duration} min`;
+
+    dialogBadges.append(level, skill, duration);
+
+    /* ===== ACTIVITY MATERIALS ===== */
+    dialogMaterials.replaceChildren();
+
+    activity.materials.forEach(material => {
+        const listItem = document.createElement("li");
+        listItem.textContent = material;
+
+        dialogMaterials.appendChild(listItem);
+    });
+
+    /* ===== ACTIVITY INSTRUCTIONS ===== */
+    dialogInstructions.replaceChildren();
+
+    activity.instructions.forEach(instruction => {
+        const listItem = document.createElement("li");
+        listItem.textContent = instruction;
+
+        dialogInstructions.appendChild(listItem);
+    });
+
+    /* ===== SHOW MODAL ===== */
+    activityDialog.showModal();
 }
 
 
@@ -95,7 +164,6 @@ function filterActivities() {
     showFilteredActivities();
 }
 
-
 /* ===== DISPLAY FILTERED ACTIVITIES ===== */
 function showFilteredActivities() {
     // Select only the activities currently visible
@@ -119,7 +187,6 @@ function showFilteredActivities() {
     }
 }
 
-
 /* ===== CREATE ACTIVITY CARDS ===== */
 function displayActivities(activities) {
     // Remove previously displayed cards
@@ -127,34 +194,41 @@ function displayActivities(activities) {
 
     // Create one card for each activity
     activities.forEach(activity => {
+
+        /* ===== CARD CONTAINER ===== */
         const card = document.createElement("article");
         card.classList.add("activity-card");
 
-        // Activity title
+        /* ===== ACTIVITY TITLE ===== */
         const title = document.createElement("h3");
         title.textContent = activity.title;
 
-        // Activity description
+        /* ===== ACTIVITY DESCRIPTION ===== */
         const description = document.createElement("p");
         description.classList.add("activity-description");
         description.textContent = activity.description;
 
-        // Activity level
-        const level = document.createElement("p");
+        /* ===== ACTIVITY LEVEL ===== */
+        const level = document.createElement("span");
         level.classList.add("activity-level");
-        level.textContent = `Level: ${activity.level}`;
+        level.textContent = activity.level;
 
-        // Activity skill
-        const skill = document.createElement("p");
+        /* ===== ACTIVITY SKILL ===== */
+        const skill = document.createElement("span");
         skill.classList.add("activity-skill");
-        skill.textContent = `Skill: ${activity.skill}`;
+        skill.textContent = activity.skill;
 
-        // Activity duration
+        /* ===== BADGES CONTAINER ===== */
+        const badges = document.createElement("div");
+        badges.classList.add("activity-badges");
+        badges.append(level, skill);
+
+        /* ===== ACTIVITY DURATION ===== */
         const duration = document.createElement("p");
         duration.classList.add("activity-duration");
         duration.textContent = `Duration: ${activity.duration} min`;
 
-        // View Details button
+        /* ===== VIEW DETAILS BUTTON ===== */
         const button = document.createElement("button");
         button.type = "button";
         button.classList.add("activity-details");
@@ -166,21 +240,19 @@ function displayActivities(activities) {
             `View details for ${activity.title}`
         );
 
-        // Add elements to the card
+        /* ===== APPEND CARD ELEMENTS ===== */
         card.append(
             title,
             description,
-            level,
-            skill,
+            badges,
             duration,
             button
         );
 
-        // Add card to the activities container
+        /* ===== APPEND CARD TO CONTAINER ===== */
         activitiesContainer.appendChild(card);
     });
 }
-
 
 /* ===== SEARCH BUTTON EVENT ===== */
 searchButton.addEventListener("click", filterActivities);
@@ -230,6 +302,22 @@ clearButton.addEventListener("click", () => {
     loadMoreButton.hidden = true;
 });
 
+/* ===== VIEW DETAILS BUTTON EVENT ===== */
+activitiesContainer.addEventListener("click", (event) => {
+    const button = event.target.closest(".activity-details");
+
+    if (!button || !activitiesContainer.contains(button)) {
+        return;
+    }
+
+    openActivityDialog(button.dataset.id);
+});
+
+
+/* ===== CLOSE MODAL BUTTON EVENT ===== */
+closeDialogButton.addEventListener("click", () => {
+    activityDialog.close();
+});
 
 /* ===== INITIALIZE ACTIVITIES ===== */
 getActivities();
