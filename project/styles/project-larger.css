@@ -61,27 +61,35 @@
         font-size: 1.7rem;
     }
 
-    .activities-intro h2 {
-    font-size: 1.5rem;
-}
+        .activities-intro h2 {
+        font-size: 1.5rem;
+    }
 
-    /* ===== Activities Filters ===== */
-
+    /* ===== ACTIVITIES FILTERS ===== */
     .filters-container {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 20px;
-    align-items: end;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+        align-items: end;
     }
 
-    .activities-filters {
-    margin-inline: 0;
-    border-radius: 10px;
+    /* ===== FAVORITES FILTER ===== */
+    .favorites-filter {
+        grid-column: 1;
+        align-self: center;
     }
 
-    #clear-filter {
-        width: auto;
-        justify-self: start;
+    /* ===== FILTER ACTIONS ===== */
+    .filter-actions {
+        grid-column: 2;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 15px;
+    }
+
+    .filter-actions button {
+        width: 100%;
+        min-width: 0;
     }
 
     /* ===== Activities Grid ===== */

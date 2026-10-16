@@ -109,7 +109,7 @@
                     <select name="duration-filter" id="duration-filter">
                         <option value="all">Any Duration</option>
                         <option value="15">Up to 15 minutes</option>
-                        <option value="20">Up tp 20 minutes</option>
+                        <option value="20">Up to 20 minutes</option>
                         <option value="30">30+ minutes</option>
                     </select>
                 </div>
@@ -122,13 +122,16 @@
                     </label>
                 </div>
 
-                <button type="button" id="search-activities">
-                    Search Activities
-                </button>
+                <!-- ===== FILTER ACTIONS ===== -->
+                <div class="filter-actions">
+                    <button type="button" id="search-activities" disabled>
+                        Search Activities
+                    </button>
 
-                <button type="button" id="clear-filter">
-                    Clear Filters
-                </button>
+                    <button type="button" id="clear-filter">
+                        Clear Filters
+                    </button>
+                </div>
             </div>
         </section>
 
@@ -184,7 +187,7 @@
             <div class="footer-notes">
                 <p class="course">WDD 231: Dynamic Web Fundamentals</p>
                 <p>Tiago Cavalcante | Brazil</p>
-                <p>&copy; <span id="currentyear"></span> Recife Chamber of Commerce</p>
+                <p>&copy; <span id="currentyear"></span> English Activities Hub</p>
                 <p id="lastModified"></p>
             </div>
     </footer>

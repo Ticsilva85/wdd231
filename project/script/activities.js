@@ -376,10 +376,15 @@ activitiesContainer.addEventListener("click", (event) => {
 
     // Refresh results if the favorites filter is active
     if (favoritesOnly.checked) {
-        filterActivities();
+    const currentVisibleCount = visibleCount;
+
+    filterActivities();
+
+    visibleCount = currentVisibleCount;
+
+    showFilteredActivities();
     }
 });
-
 
 /* ===== VIEW DETAILS BUTTON EVENT ===== */
 activitiesContainer.addEventListener("click", (event) => {
@@ -396,6 +401,13 @@ activitiesContainer.addEventListener("click", (event) => {
 /* ===== CLOSE MODAL BUTTON EVENT ===== */
 closeDialogButton.addEventListener("click", () => {
     activityDialog.close();
+});
+
+/* ===== CLOSE MODAL ON BACKDROP CLICK ===== */
+activityDialog.addEventListener("click", (event) => {
+    if (event.target === activityDialog) {
+        activityDialog.close();
+    }
 });
 
 /* ===== INITIALIZE ACTIVITIES ===== */

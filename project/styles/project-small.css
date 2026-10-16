@@ -196,6 +196,9 @@ main h1::after {
     flex-direction: column;
     gap: 20px;
     text-align: center;
+    background-color: var(--section-background);
+    padding: 20px;
+    border-radius: 10px;
 }
 
 .activities-intro h2 {
@@ -349,7 +352,6 @@ main h1::after {
 
 /* ===== Card Button ===== */
 .activity-details {
-    margin-top: auto;
     padding: 12px 20px;
     border: none;
     border-radius: 6px;
@@ -453,7 +455,6 @@ main h1::after {
     }
 }
 
-
 /* ===== Search Activities Button ===== */
 
 #search-activities,
@@ -464,7 +465,6 @@ main h1::after {
     font: inherit;
     font-weight: 600;
     cursor: pointer;
-    width: 200px;
     background-color: var(--accent-color);
     color: var(--header-color);
     box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.3); 
@@ -484,6 +484,22 @@ main h1::after {
 
 #load-more[hidden] {
     display: none;
+}
+
+#search-activities:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* ===== FILTER ACTIONS - MOBILE ===== */
+.filter-actions {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 15px;
+}
+
+.filter-actions button {
+    width: 100%;
 }
 
 /* ================== ACTIVITY MODAL ================== */
