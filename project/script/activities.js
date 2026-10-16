@@ -1,6 +1,13 @@
 
 /* ================== ACTIVITIES.JS ================== */
 
+/* ===== FAVORITES MODULE ===== */
+import {
+    getFavorites,
+    isFavorite,
+    toggleFavorite
+} from "./favorites.js";
+
 /* ===== DOM ELEMENTS ===== */
 const searchInput = document.querySelector("#activity-search");
 const levelFilter = document.querySelector("#level-filter");
@@ -13,6 +20,9 @@ const loadMoreButton = document.querySelector("#load-more");
 
 const activitiesContainer = document.querySelector("#activities-container");
 const resultsCount = document.querySelector("#results-count");
+
+/* ===== FAVORITES FILTER ===== */
+const favoritesOnly = document.querySelector("#favorites-only");
 
 /* ===== DIALOG ELEMENTS ===== */
 const activityDialog = document.querySelector("#activity-dialog");
@@ -124,6 +134,7 @@ function openActivityDialog(activityId) {
 }
 
 
+
 /* ===== FILTER ACTIVITIES ===== */
 function filterActivities() {
     // Get selected filter values
@@ -131,8 +142,12 @@ function filterActivities() {
     const selectedLevel = levelFilter.value;
     const selectedSkill = skillFilter.value;
     const selectedDuration = durationFilter.value;
+    const showFavoritesOnly = favoritesOnly.checked;
 
-    // Filter activities according to selected criteria
+    // Get saved favorite IDs
+    const favorites = getFavorites();
+
+    /* ===== APPLY FILTERS ===== */
     filteredActivities = allActivities.filter(activity => {
         const matchesSearch = activity.title
             .toLowerCase()
@@ -152,13 +167,18 @@ function filterActivities() {
             (selectedDuration === "20" && activity.duration <= 20) ||
             (selectedDuration === "30" && activity.duration >= 30);
 
+        const matchesFavorites =
+            !showFavoritesOnly ||
+            favorites.includes(activity.id);
+
         return matchesSearch &&
                matchesLevel &&
                matchesSkill &&
-               matchesDuration;
+               matchesDuration &&
+               matchesFavorites;
     });
 
-    // Reset visible cards after each search
+    /* ===== RESET VISIBLE ACTIVITIES ===== */
     visibleCount = activitiesPerPage;
 
     showFilteredActivities();
@@ -240,13 +260,37 @@ function displayActivities(activities) {
             `View details for ${activity.title}`
         );
 
+        /* ===== FAVORITE BUTTON ===== */
+        const favoriteButton = document.createElement("button");
+        favoriteButton.type = "button";
+        favoriteButton.classList.add("favorite-button");
+        favoriteButton.dataset.id = activity.id;
+
+        const favorite = isFavorite(activity.id);
+
+        favoriteButton.textContent = favorite ? "♥" : "♡";
+        favoriteButton.setAttribute("aria-pressed", String(favorite));
+        favoriteButton.setAttribute(
+            "aria-label",
+            `Favorite ${activity.title}`
+        );
+        favoriteButton.title = favorite
+            ? "Remove from favorites"
+            : "Add to favorites";
+
         /* ===== APPEND CARD ELEMENTS ===== */
+        /* ===== CARD ACTIONS ===== */
+        const cardActions = document.createElement("div");
+        cardActions.classList.add("card-actions");
+
+        cardActions.append(button, favoriteButton);
+
         card.append(
             title,
             description,
             badges,
             duration,
-            button
+            cardActions
         );
 
         /* ===== APPEND CARD TO CONTAINER ===== */
@@ -269,7 +313,6 @@ searchInput.addEventListener("keydown", (event) => {
     }
 });
 
-
 /* ===== LOAD MORE BUTTON EVENT ===== */
 loadMoreButton.addEventListener("click", () => {
     // Increase the number of visible activities
@@ -290,6 +333,7 @@ clearButton.addEventListener("click", () => {
     // Reset filtered activities and pagination
     filteredActivities = [];
     visibleCount = activitiesPerPage;
+    favoritesOnly.checked = false;
 
     // Remove displayed cards
     activitiesContainer.replaceChildren();
@@ -301,6 +345,41 @@ clearButton.addEventListener("click", () => {
     // Hide Load More button
     loadMoreButton.hidden = true;
 });
+
+
+/* ===== FAVORITE BUTTON EVENT ===== */
+activitiesContainer.addEventListener("click", (event) => {
+    const button = event.target.closest(".favorite-button");
+
+    if (!button || !activitiesContainer.contains(button)) {
+        return;
+    }
+
+    const activityId = Number(button.dataset.id);
+
+    // Add or remove the selected activity
+    const favorite = toggleFavorite(activityId);
+
+    // Stop if localStorage could not save the change
+    if (favorite === null) {
+        resultsCount.textContent =
+            "Unable to save favorites in this browser.";
+        return;
+    }
+
+    // Update the button appearance and accessibility state
+    button.textContent = favorite ? "♥" : "♡";
+    button.setAttribute("aria-pressed", String(favorite));
+    button.title = favorite
+        ? "Remove from favorites"
+        : "Add to favorites";
+
+    // Refresh results if the favorites filter is active
+    if (favoritesOnly.checked) {
+        filterActivities();
+    }
+});
+
 
 /* ===== VIEW DETAILS BUTTON EVENT ===== */
 activitiesContainer.addEventListener("click", (event) => {
