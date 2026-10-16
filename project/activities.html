@@ -63,82 +63,91 @@
 
     <main>
         <h1>Classroom Activities</h1>
-        
-        <section class="activities-intro" aria-labelledby="intro-title">
-            <h2 id="intro-title">Explore Our Activities</h2>
 
-            <p>Discover engaging English classroom activities designed
-            to help teachers create interactive and meaningful
-            learning experiences.</p>
-        </section>
+        <section class="activities-aside">
+            <div class="activities-intro" aria-labelledby="intro-title">
+                <aside>
+                    <h2 id="intro-title">Explore Our Activities</h2>
 
-        <section class="activities-filters" aria-labelledby="filters-title">
-            <h2 id="filters-title">Find an Activity</h2>
-            
-            <div class="filters-container">
-                <div class="filter-group">
-                    <label for="activity-search">Search Activities</label>
-                    <input 
-                        type="search"
-                        id="activity-search"
-                        name="activity-search"
-                        placeholder="Search by activity name..."
-                    >
-                </div>
+                    <p>Discover engaging English classroom activities designed
+                    to help teachers create interactive and meaningful
+                    learning experiences.</p>
+                </aside>
 
-                <div class="filter-group">
-                    <label for="level-filter">Level</label>
-                    <select name="level-filter" id="level-filter">
-                        <option value="all">All Levels</option>
-                        <option value="beginner">Beginner</option>
-                        <option value="elementary">Elementary</option>
-                        <option value="intermediate">Intermediate</option>
-                        <option value="advanced">Advanced</option>
-                    </select>
-                </div>
-
-                <div class="filter-group">
-                    <label for="skill-filter">Skill</label>
-                    <select name="skill-filter" id="skill-filter">
-                        <option value="all">All Skills</option>
-                        <option value="vocabulary">Vocabulary</option>
-                        <option value="grammar">Grammar</option>
-                        <option value="reading">Reading</option>
-                        <option value="writing">Writing</option>
-                        <option value="listening">Listening</option>
-                        <option value="speaking">Speaking</option>
-                    </select>
-                </div>
-
-                <div class="filter-group">
-                    <label for="duration-filter">Duration</label>
-                    <select name="duration-filter" id="duration-filter">
-                        <option value="all">Any Duration</option>
-                        <option value="15">Up to 15 minutes</option>
-                        <option value="20">Up to 20 minutes</option>
-                        <option value="30">30+ minutes</option>
-                    </select>
-                </div>
-
-                <!-- ===== FAVORITES FILTER ===== -->
-                <div class="favorites-filter">
-                    <label for="favorites-only">
-                        <input type="checkbox" id="favorites-only">
-                        Show only my favorites
-                    </label>
-                </div>
-
-                <!-- ===== FILTER ACTIONS ===== -->
-                <div class="filter-actions">
-                    <button type="button" id="search-activities" disabled>
-                        Search Activities
-                    </button>
-
-                    <button type="button" id="clear-filter">
-                        Clear Filters
-                    </button>
-                </div>
+                <picture>
+                    <source media="(min-width: 825px)" srcset="./images/aside-larger.webp">
+                    <img src="./images/aside-vertical.webp" alt="North America Countries Flags" class="suggest-image">
+                </picture>
             </div>
+
+            <section class="activities-filters" aria-labelledby="filters-title">
+                <h2 id="filters-title">Find an Activity</h2>
+                
+                <div class="filters-container">
+                    <div class="filter-group">
+                        <label for="activity-search">Search Activities</label>
+                        <input 
+                            type="search"
+                            id="activity-search"
+                            name="activity-search"
+                            placeholder="Search by activity name..."
+                        >
+                    </div>
+
+                    <div class="filter-group">
+                        <label for="level-filter">Level</label>
+                        <select name="level-filter" id="level-filter">
+                            <option value="all">All Levels</option>
+                            <option value="beginner">Beginner</option>
+                            <option value="elementary">Elementary</option>
+                            <option value="intermediate">Intermediate</option>
+                            <option value="advanced">Advanced</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label for="skill-filter">Skill</label>
+                        <select name="skill-filter" id="skill-filter">
+                            <option value="all">All Skills</option>
+                            <option value="vocabulary">Vocabulary</option>
+                            <option value="grammar">Grammar</option>
+                            <option value="reading">Reading</option>
+                            <option value="writing">Writing</option>
+                            <option value="listening">Listening</option>
+                            <option value="speaking">Speaking</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label for="duration-filter">Duration</label>
+                        <select name="duration-filter" id="duration-filter">
+                            <option value="all">Any Duration</option>
+                            <option value="15">Up to 15 minutes</option>
+                            <option value="20">Up to 20 minutes</option>
+                            <option value="30">30+ minutes</option>
+                        </select>
+                    </div>
+
+                    <!-- ===== FAVORITES FILTER ===== -->
+                    <div class="favorites-filter">
+                        <label for="favorites-only">
+                            <input type="checkbox" id="favorites-only">
+                            Show only my favorites
+                        </label>
+                    </div>
+
+                    <!-- ===== FILTER ACTIONS ===== -->
+                    <div class="filter-actions">
+                        <button type="button" id="search-activities" disabled>
+                            Search Activities
+                        </button>
+
+                        <button type="button" id="clear-filter">
+                            Clear Filters
+                        </button>
+                    </div>
+                </div>
+            </section>
         </section>
 
         <section class="activities-catalog" aria-labelledby="catalog-title">
@@ -157,6 +166,7 @@
             </button>
 
         </section>
+    
 
     </main>
 

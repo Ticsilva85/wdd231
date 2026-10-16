@@ -61,14 +61,26 @@
         font-size: 1.7rem;
     }
 
-        .activities-intro h2 {
+    .activities-aside {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 40px;
+        align-items: start;
+    }
+
+    .activities-intro h2 {
         font-size: 1.5rem;
     }
 
     /* ===== Activities Filters ===== */
+    .activities-filters {
+        border-radius: 5px;
+        height: 100%;
+    }
+
     .filters-container {
         display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-columns: 1fr;
         gap: 20px;
         align-items: end;
     }
@@ -81,9 +93,8 @@
 
     /* ===== Filter Actions ===== */
     .filter-actions {
-        grid-column: 2;
+        grid-column: 1;
         display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 15px;
     }
 
@@ -94,8 +105,13 @@
 
     /* ===== Activities Grid ===== */
     .activities-grid {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 280px));
+        justify-content: center;
         gap: 25px;
+        width: 100%;
+        max-width: 1000px;
+        margin-inline: auto;
     }
 
     /* ================== SUGGEST.HTML ================== */
