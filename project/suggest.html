@@ -21,17 +21,16 @@
     <!-- SCRIPTS -->
     <script src="./script/main.js" defer></script>
     <script src="./script/form.js"></script>
-    <script src="./script/suggest.html"></script>
-    <script src="./script/favorites.js"></script>
+    <script src="./script/suggest.js"></script>
     <script src="./script/thankyou.js"></script>
 
     <!-- FAVICON -->
-    <link rel="icon" href="./images/favicon.ico">
+    <link rel="icon" href="./images/final-project-favicon.ico">
 
     <!-- FONTS -->
 </head>
 <body>
-        <header>
+    <header>
         <img src="./images/final-project-logo.svg" alt="English Activities Hub logo">
 
         <a href="index.html" class="site-logo">English Activities Hub</a>
@@ -60,5 +59,97 @@
             </ul>
         </nav>
     </header>
+
+    <main>
+        <h1>Suggest an Activity</h1>
+
+        <p>
+            Share your favorite English classroom activity
+            with other teachers!
+        </p>
+
+        <form action="thankyou.html" method="get">
+            <label for="teacher-name">Teacher's Name</label>
+            <input
+                type="text"
+                id="teacher-name"
+                name="teacherName"
+                autocomplete="name"
+                required
+            >
+
+            <label for="email">Email Address</label>
+            <input
+                type="email"
+                id="email"
+                name="email"
+                autocomplete="email"
+                required
+            >
+
+            <label for="activity-title">Activity Title</label>
+            <input
+                type="text"
+                id="activity-title"
+                name="activityTitle"
+                required
+            >
+
+            <label for="language-level">Language Level</label>
+            <input type="radio" id="language-level" name="language-level" value="beginner">
+            <label for="radio-beginner">Beginner</label><br>
+
+            <input type="radio" id="language-level" name="language-level" value="elementary">
+            <label for="radio-elementary">Elementary</label><br>
+
+            <input type="radio" id="language-level" name="language-level" value="intermediate">
+            <label for="radio-intermediate">Intermediate</label><br>
+
+            <input type="radio" id="language-level" name="language-level" value="advanced">
+            <label for="radio-advanced">Advanced</label><br>
+
+
+            <label for="activity-category">Activity Skills</label>
+            <select
+                id="activity-category"
+                name="activity-category"
+                required
+            >
+                <option value="" disabled selected>Choose a Language Skill</option>
+                <option value="vocabulary">Vocabulary</option>
+                <option value="grammar">Grammar</option>
+                <option value="reading">Reading</option>
+                <option value="writing">Writing</option>
+                <option value="listening">Listening</option>
+                <option value="speaking">Speaking</option>
+            </select>
+
+            <label for="activity-description">Activity Description</label>
+            <input
+                type="text"
+                id="activity-title"
+                name="activityTitle"
+                required
+            >
+
+            <button type="submit">
+                Submit Suggestion
+            </button>
+        </form>
+    </main>
+
+    <footer>
+        <div class="footer-larger">
+            <div class="footer-header">
+                <span class="title">English Activities Hub</span>
+            </div>
+        </div>
+            <div class="footer-notes">
+                <p class="course">WDD 231: Dynamic Web Fundamentals</p>
+                <p>Tiago Cavalcante | Brazil</p>
+                <p>&copy; <span id="currentyear"></span> English Activities Hub</p>
+                <p id="lastModified"></p>
+            </div>
+    </footer>
 </body>
 </html>
