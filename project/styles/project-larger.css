@@ -115,11 +115,10 @@
     }
 
     /* ================== SUGGEST.HTML ================== */
-
     /* ===== Suggest Intro ===== */
     .suggest-aside {
         display: grid;
-        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        grid-template-columns: 2fr 1fr;
         gap: 40px;
         align-items: start;
     }
@@ -132,6 +131,10 @@
         max-height: 450px;
     }
 
+    form {
+        border-radius: 5px;
+        height: 100%;
+    }
 
     /* ===== FOOTER ===== */
     /* ===== Wage SVG ===== */

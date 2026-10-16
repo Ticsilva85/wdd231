@@ -467,7 +467,13 @@ main h1::after {
     cursor: pointer;
     background-color: var(--accent-color);
     color: var(--header-color);
-    box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.3); 
+    box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.3);
+    transition: background-color ease-in-out 0.3s; 
+}
+
+#search-activities:hover,
+#clear-filter:hover {
+    background-color: var(--background-color);
 }
 
 #load-more {
@@ -586,7 +592,6 @@ main h1::after {
 }
 
 /* ================== SUGGEST.HTML ================== */
-
 aside {
     display: flex;
     flex-direction: column;
@@ -609,10 +614,14 @@ form {
     flex-direction: column;
     gap: 15px;
     padding: 20px;
-    margin: 20px;
-    border: 1px solid var(--border-color);
-    border-radius: 5px;
-    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    margin-inline: -20px;
+    background-color: var(--header-color);
+    color: var(--background-color)
+}
+
+form > h2 {
+    font-size: 1.3rem;
+    text-align: center;
 }
 
 .input-form {
@@ -644,18 +653,19 @@ form > button {
     width: fit-content;
     padding: 10px 15px;
     border: 1px solid var(--header-color);
-    color: var(--background-color);
-    background-color: var(--header-color);
+    color: var(--header-color);
+    background-color: var(--accent-color);
     font-weight: bold;
     font-size: 1.2rem;
     border-radius: 6px;
     align-self: center;
     box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.3);
     transition: background-color ease-in-out 0.3s;
+    cursor: pointer;
 }
 
 form > button:hover {
-    background-color: var(--accent-color);
+    background-color: var(--background-color);
     color: var(--header-color);
     border: 1px solid var(--header-color);
 }
