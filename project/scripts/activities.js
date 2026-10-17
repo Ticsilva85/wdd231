@@ -164,8 +164,9 @@ function filterActivities() {
         const matchesDuration =
             selectedDuration === "all" ||
             (selectedDuration === "15" && activity.duration <= 15) ||
-            (selectedDuration === "20" && activity.duration <= 20) ||
-            (selectedDuration === "30" && activity.duration >= 30);
+            (selectedDuration === "30" &&
+                activity.duration > 15 && activity.duration <= 30) ||
+            (selectedDuration === "31" && activity.duration > 30);
 
         const matchesFavorites =
             !showFavoritesOnly ||
@@ -272,7 +273,9 @@ function displayActivities(activities) {
         favoriteButton.setAttribute("aria-pressed", String(favorite));
         favoriteButton.setAttribute(
             "aria-label",
-            `Favorite ${activity.title}`
+            favorite
+                ? `Remove ${activity.title} from favorites`
+                : `Add ${activity.title} to favorites`
         );
         favoriteButton.title = favorite
             ? "Remove from favorites"

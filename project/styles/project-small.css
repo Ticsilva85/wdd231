@@ -598,11 +598,11 @@ main h1::after {
 }
 
 /* ================== SUGGEST.HTML ================== */
-.suggest-aside{ 
+.suggest-aside { 
     padding: 20px;
 }
 
-aside {
+.suggest-intro aside {
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -619,7 +619,7 @@ aside > p {
     font-size: 1rem;
 }
 
-form {
+.suggest-aside form {
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -764,12 +764,10 @@ form > button:hover {
     align-self: center;
     padding: 12px 25px;
     background-color: var(--header-color);
-    color: #FFFFFF;
     border-radius: 6px;
     text-decoration: none;
     font-weight: 600;
     cursor: pointer;
-    background-color: var(--header-color);
     color: var(--background-color);
     box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.3);
     transition: background-color ease-in-out 0.3s;
