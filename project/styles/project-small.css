@@ -196,7 +196,6 @@ main h1::after {
     flex-direction: column;
     gap: 20px;
     text-align: center;
-    background-color: var(--section-background);
     padding: 20px;
     border-radius: 10px;
 }
