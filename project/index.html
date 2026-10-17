@@ -133,9 +133,31 @@
                 Share Your Activity
             </a>
         </section>
-
     </main>
 
+    <!-- ===== FEATURED ACTIVITY DETAILS MODAL ===== -->
+    <dialog id="activity-dialog" aria-labelledby="dialog-title">
+        <div class="dialog-content">
+            <button
+                type="button"
+                id="close-dialog"
+                aria-label="Close activity details">
+                &times;
+            </button>
+
+            <h2 id="dialog-title"></h2>
+
+            <div id="dialog-badges"></div>
+
+            <p id="dialog-description"></p>
+
+            <h3>Materials Needed</h3>
+            <ul id="dialog-materials"></ul>
+
+            <h3>Instructions</h3>
+            <ol id="dialog-instructions"></ol>
+        </div>
+    </dialog>
 
     <footer>
         <div class="footer-larger">

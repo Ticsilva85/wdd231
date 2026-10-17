@@ -124,6 +124,14 @@
         height: 100%;
     }
 
+    /* ================== SUGGEST.HTML ================== */
+    /* ===== Home Featured Activities ===== */
+    .featured-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 25px;
+        align-items: stretch;
+    }
+
     /* ===== FOOTER ===== */
     /* ===== Wage SVG ===== */
         footer::before {

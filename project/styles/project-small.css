@@ -370,15 +370,17 @@ main h1::after {
     border: none;
     border-radius: 6px;
     background-color: var(--header-color);
-    color: #FFFFFF;
+    color: var(--background-color);
     font: inherit;
     font-weight: 600;
     cursor: pointer;
+    box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.3);
     transition: background-color 0.3s ease;
 }
 
 .activity-details:hover {
-    background-color: var(--body-font-color);
+    background-color: var(--accent-color);
+    color: var(--header-color);
 }
 
 .activity-details:focus-visible {
@@ -791,6 +793,7 @@ form > button:hover {
     gap: 20px;
     background-color: var(--soft-highlight);
     margin-inline: -20px;
+    margin-top: 10px;
 }
 
 .hero-content {
@@ -813,12 +816,16 @@ form > button:hover {
     background-color: var(--header-color);
     width: 250px;
     color: var(--background-color);
-    border: 1px solid var(--header-color);
     font-weight: 600;
     border-radius: 6px;
     cursor: pointer;
     box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.3);
     transition: background-color ease-in-out 0.3s;
+}
+
+.hero-content > a:hover {
+    background-color: var(--accent-color);
+    color: var(--header-color);
 }
 
 .home-hero > picture {
@@ -844,6 +851,110 @@ form > button:hover {
 }
 
 /*  ===== Featured Activities ===== */
+.home-featured {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+    border: 1px solid var(--border-color);
+    padding: 20px;
+    border-radius: 6px;
+}
+
+#featured-title {
+    font-size: 1.3rem;
+}
+
+.home-featured > p {
+    font-size: 1rem;
+}
+
+.home-featured > a {
+    display: inline-block;
+    align-self: center;
+    text-decoration: none;
+    padding: 12px 25px;
+    background-color: var(--header-color);
+    width: 250px;
+    color: var(--background-color);
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.3);
+    transition: background-color ease-in-out 0.3s;
+}
+
+.home-featured > a:hover {
+    background-color: var(--accent-color);
+    color: var(--header-color);
+}
+
+/*  ===== Suggestion Section ===== */
+.home-suggest {
+    display:flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+    padding: 20px;
+    border: 1px solid var(--border-color);
+    padding: 20px;
+    border-radius: 6px;
+}
+
+#suggest-title {
+    font-size: 1.3rem;
+}
+
+.home-suggest > p {
+    font-size: 1rem;
+}
+
+.home-suggest > a {
+    display: inline-block;
+    align-self: center;
+    text-decoration: none;
+    padding: 12px 25px;
+    background-color: var(--header-color);
+    width: 250px;
+    color: var(--background-color);
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.3);
+    transition: background-color ease-in-out 0.3s;
+}
+
+.home-suggest > a:hover {
+    background-color: var(--accent-color);
+    color: var(--header-color);
+}
+
+/* ===== Home Featured Activity Links ===== */
+.featured-grid .activity-details {
+    display: block;
+    margin-top: auto;
+    text-align: center;
+    text-decoration: none;
+}
+
+.featured-grid .activity-details:focus-visible {
+    padding: 10px;
+    outline: 3px solid var(--secondary-accent);
+    outline-offset: 3px;
+}
+
+
+/* ===== Home FEatured Activities ===== */
+.featured-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 20px;
+    width: 100%;
+}
+
+.featured-grid .activity-details {
+    margin-top: auto;
+}
 
 /* ===== FOOTER ===== */
 footer {
