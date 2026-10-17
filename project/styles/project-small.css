@@ -894,7 +894,6 @@ form > button:hover {
     text-align: center;
     padding: 20px;
     border: 1px solid var(--border-color);
-    padding: 20px;
     border-radius: 6px;
 }
 
@@ -932,7 +931,6 @@ form > button:hover {
     margin-top: auto;
     text-align: center;
     text-decoration: none;
-    margin-top: auto;
 }
 
 .featured-grid .activity-details:focus-visible {
@@ -942,7 +940,7 @@ form > button:hover {
 }
 
 
-/* ===== Home FEatured Activities ===== */
+/* ===== Home Featured Activities ===== */
 .featured-grid {
     display: grid;
     grid-template-columns: minmax(0, 1fr);
