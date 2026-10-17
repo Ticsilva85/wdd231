@@ -856,6 +856,7 @@ form > button:hover {
     border: 1px solid var(--border-color);
     padding: 20px;
     border-radius: 6px;
+    background-color: var(--background-color);
 }
 
 #featured-title {
@@ -895,6 +896,7 @@ form > button:hover {
     padding: 20px;
     border: 1px solid var(--border-color);
     border-radius: 6px;
+    background-color: var(--background-color);
 }
 
 #suggest-title {
@@ -946,6 +948,7 @@ form > button:hover {
     grid-template-columns: minmax(0, 1fr);
     gap: 20px;
     width: 100%;
+
 }
 
 /* ===== FOOTER ===== */

@@ -37,9 +37,9 @@ const dialogInstructions = document.querySelector("#dialog-instructions");
 /* ===== GLOBAL VARIABLES ===== */
 let allActivities = [];
 let filteredActivities = [];
-let visibleCount = 6;
+let visibleCount = 18;
 
-const activitiesPerPage = 6;
+const activitiesPerPage = 18;
 
 /* ===== LOAD ACTIVITIES FROM JSON ===== */
 async function getActivities() {
@@ -56,11 +56,11 @@ async function getActivities() {
         // Convert JSON response into JavaScript objects
         allActivities = await response.json();
 
-        // Enable search after successful loading
+        filteredActivities = [...allActivities];
+
         searchButton.disabled = false;
 
-        resultsCount.textContent =
-            "Use the filters above to find activities.";
+        showFilteredActivities();
 
     } catch (error) {
         console.error("Error loading activities:", error);
