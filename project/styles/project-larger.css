@@ -143,8 +143,8 @@
 
     /* ===== FOOTER ===== */
     /* ===== Wage SVG ===== */
-        footer::before {
-            height: 100px;
-            background-size: 100% 100%;
-        }
+    footer::before {
+        height: 100px;
+        background-size: 100% 100%;
+    }
 }

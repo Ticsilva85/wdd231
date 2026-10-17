@@ -600,10 +600,6 @@ main h1::after {
 }
 
 /* ================== SUGGEST.HTML ================== */
-.suggest-aside { 
-    padding: 20px;
-}
-
 .suggest-intro aside {
     display: flex;
     flex-direction: column;
@@ -696,6 +692,7 @@ form > button:hover {
     width: 100%;
     min-width: 0;
     margin-inline: 0;
+    padding: 20px;
 }
 
 /* ===== Suggest Intro ===== */
@@ -935,6 +932,7 @@ form > button:hover {
     margin-top: auto;
     text-align: center;
     text-decoration: none;
+    margin-top: auto;
 }
 
 .featured-grid .activity-details:focus-visible {
@@ -950,10 +948,6 @@ form > button:hover {
     grid-template-columns: minmax(0, 1fr);
     gap: 20px;
     width: 100%;
-}
-
-.featured-grid .activity-details {
-    margin-top: auto;
 }
 
 /* ===== FOOTER ===== */
