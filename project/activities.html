@@ -26,9 +26,9 @@
     <link rel="icon" href="./images/final-project-favicon.ico">
 
     <!-- FONTS -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
 </head>
 <body>
     <header>
@@ -74,10 +74,18 @@
                     learning experiences.</p>
                 </aside>
 
-                <picture>
-                    <source media="(min-width: 825px)" srcset="./images/aside-larger.webp">
-                    <img src="./images/aside-vertical.webp" alt="North America map with Canada and USA flags pinned on it" class="suggest-image">
-                </picture>
+            <picture>
+                <source
+                    media="(min-width: 825px)"
+                    srcset="./images/aside-larger.webp">
+
+                <img
+                    src="./images/aside-vertical.webp"
+                    alt="North America map with Canada and USA flags pinned on it"
+                    class="suggest-image"
+                    loading="eager"
+                    fetchpriority="high">
+            </picture>
             </div>
 
             <section class="activities-filters" aria-labelledby="filters-title">
