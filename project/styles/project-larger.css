@@ -39,6 +39,15 @@
         padding: 0;
     }
 
+    .navigation > li > a {
+        transition: color ease-in-out 0.3s;
+    }
+
+    .navigation > li > a:hover {
+        color: var(--accent-color);
+
+    }
+
     .navigation .active {
         background-color: var(--header-color);
         color: var(--background-color);
